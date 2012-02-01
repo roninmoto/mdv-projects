@@ -1,0 +1,161 @@
+/*
+title: additem.html Styles
+by: Joel Betterly
+for: VFW Project 4
+term: 0112
+*/
+
+#index{ /* Index.html */
+    font-family:Arial, Helvetica, san-serif;
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    background-color: rgb(225,225,225);
+    background-image: url(cal.png);
+    background-repeat: no-repeat;
+}
+
+#additem{ /* AddItem.html */
+    font-family:Arial, Helvetica, san-serif;
+    width: 400px;
+    margin: auto;
+    padding: 10px;
+    background-color: rgb(128,128,128);
+    background-image: url(background.jpg);
+}
+
+#heading{
+    color: blue;
+    width: 100%;
+    font-size: 24px;
+    font-family: Arial, Helvetica, san-serif;
+    font-weight: bold ;
+    line-height: 1.4
+}
+
+#desc{ /* Index.html */
+    color: blue;
+    width: 100%;
+    font-family: Arial, Helvetica, san-serif;
+    font-weight: bold ;
+    line-height: 1
+}
+
+#link{ /* Index.html */
+    color: blue;
+    width: 100%;
+    font-family: Arial, Helvetica, san-serif;
+    font-weight: bold ;
+    line-height: 1
+}
+
+#link:hover{color:green;outline: none;}
+
+/* AddItem.html from here to end*/
+h1{
+    margin: 1px 5px 5px 1px;
+    text-align: center; 
+    color: green;
+    padding: 5px; 
+    border: 1px solid black;
+   /* background: #f0f0f0; */
+    background-image: -webkit-linear-gradient(top, #e6e6e6 20%, #969696 100%);
+    width: 96%;
+    border-radius: 10px;
+    box-shadow: 2px 5px 0 0 rgba(72,72,72,1);
+}
+
+Fieldset{  
+    color: black;
+    /* background: #f0f0f0;*/
+    background-image: -webkit-linear-gradient(top, #e6e6e6 5%, #969696 100%);
+    font-family: Arial, Helvetica, san-serif;
+    font-weight: bold ;
+    line-height: 1.4;
+    border-radius: 10px;
+    box-shadow: 2px 5px 0 0 rgba(72,72,72,1);
+    
+}
+
+legend{  
+    color: green;
+    font-size: 24px;
+    font-style: italic;
+    font-family: Arial, Helvetica, san-serif;
+    font-weight: bold ;
+    line-height: 1.4;
+}
+img{
+    padding: 5px; 
+}
+
+#items{
+    margin: 1px 5px 5px 1px;
+    text-align: left; 
+    color: green;
+    padding: 5px; 
+    border: 1px solid black;
+    /* background: #f0f0f0;  */
+    background-image: -webkit-linear-gradient(top, #e6e6e6 20%, #aaaaaa 50%, #e6e6e6 100%);
+    width: 96%;
+    border-radius: 10px;
+    box-shadow: 2px 5px 0 0 rgba(72,72,72,1);
+}
+
+#range{
+    display: block;
+}
+
+#name{
+    display: block;
+}
+
+#date{
+    display: block;
+}
+
+#tom{
+    display: block;
+}
+    
+#available{
+    margin: 5px 15px 8px 1px;
+    display: inline;
+}
+
+input{
+    color: green;
+    font-size: 18px;
+    font-family: Arial, Helvetica, san-serif;
+    font-weight: bold ;
+    line-height: 1.2;
+}
+
+#errors{
+    color: red;
+    font-size: 18px;
+    font-family: Arial, Helvetica, san-serif;
+    font-weight: bold ;
+    line-height: 1.2;
+}
+
+#clear{
+    color:  blue;
+    padding: 5px;
+}
+
+#displayLink{
+    color:  blue;
+    padding: 5px;
+}
+
+#addNew{
+    color:  blue;
+    padding: 5px;
+}
+#clear:link{color:blue}
+#clear:visited{color:red}
+#clear:hover{color:green;outline: none;}
+#clear:active{color:black}
+#displayLink:hover{color:green;outline: none;}
+#addNew:hover{color:green;outline: none;}
