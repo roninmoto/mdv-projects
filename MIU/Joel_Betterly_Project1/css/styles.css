@@ -15,6 +15,20 @@ term: 0212
     background-repeat: no-repeat;
 }
 */
+#calpic{
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#jancal{
+    padding: 5px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
 #additem{ /* AddItem.html */
     font-family:Arial, Helvetica, san-serif;
     width: 400px;
