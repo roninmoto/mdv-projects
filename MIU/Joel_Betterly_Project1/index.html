@@ -1,8 +1,8 @@
 <!doctype html>
 <!--Joel Betterly
-    Visual FrameWorks
-    Project 2
-    Term 0112
+    MIU
+    Project 1
+    Term 0212
  -->
 <html>
   <head>
@@ -13,14 +13,95 @@
       <meta name="robots" content="index, follow" />
       <meta name="HandheldFriendly" content="True" />
       <meta name="MobileOptimized" content="320" />
-      <meta name="viewport" content="user-scalable=no, width=device-width" />
+      <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+      <meta http-equiv="cleartype" content="on">
+      
+      <!--title of doc -->
       <title>Appointment Keeper App</title>
+      
+      <!--Links -->
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
       <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
+  
   <body id="index">
-    <p id="heading">Appointment Keeper App</p>
+  
+  	<div data-role="page" id="Home" data-theme="a">
+	        <div data-role="header" data-position="fixed" data-theme="a">
+	           <h1>Appointment Keeper</h1>
+	      </div>
+      <div data-role="content"> 
+            <div >
+              <img src="css/cal2.png"  title="keep your appt" id="calpic"/>
+            </div>
+        <br />    
+        <ul data-role="listview" data-filter="true">
+            <li> 
+                <a href="#jan">
+                  <h3>January</h3> 
+                    <p>See the Calendar for January</p>
+                </a>
+            </li>
+            <li> 
+                <a href="#feb">
+                  <h3>Febuary</h3> 
+                    <p>See the Calendar for Febuary</p>
+                </a>
+
+            </li>
+            <li>
+                 <a href="#march">
+                  <h3>March</h3>
+                    <p>See the Calendar for March</p> 
+                 </a> 
+            </li>
+            <li>
+                <a href="#april">
+                  <h3>April</h3> 
+                    <p>See the Calendar for April</p>
+                </a>
+            </li>
+            <li> 
+                <a href="#Help">
+                  <h3> Help</h3>
+                    <p>Get help using this app</p>
+                </a>
+            </li>
+        </ul>
+        <br />
+        
+<!-- Button to click on new appointment  -->      
+        <a href="additem.html" data-role="button">"Click here to add an appointment."</a>
+      </div>
+    </div>
+
+<!-- Adding calendars for each month  -->
+<!-- January Calendar -->    
+    <div data-role="page" id="jan" data-theme="a" data-add-back-btn="true "> 
+      <div data-role="header" data-position="fixed" data-theme="a">
+			  <h1>January </h1>
+      </div>
+        <div data-role="content">
+          <ul data-role="listview" data-filter="true">
+				    <li> 
+				      <img src="images/jan.png" />
+				        <h3>January 2012 </h3>
+				          <p>Click on Calendar to add appointment.</p>
+				    </li>
+          </ul>
+        <a href="additem.html" img src="images/jan.png">  </a>
+        </div>
+      </div>
+
+
+	 </div>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+     <script type="text/javascript"  src="js/main.js"> </script>
+  
+<!--    <p id="heading">Appointment Keeper App</p>
     <p id="desc">An app that will keep appointments for upcoming events.<br/>
     Click the link below to get started.</p>
-    <a href="additem.html" id="link">Add&nbsp;an Appointment</a>
+    <a href="additem.html" id="link">Add&nbsp;an Appointment</a> -->
   </body>
 </html>
