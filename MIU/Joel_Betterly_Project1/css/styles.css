@@ -15,6 +15,8 @@ term: 0212
     background-repeat: no-repeat;
 }
 */
+
+/* Start of css for index.html  */
 #calpic{
     padding: 5px;
     display: block;
@@ -56,6 +58,57 @@ term: 0212
     margin-top: 30px;
     margin-left: 20px;
 }
+
+#junecal{
+    padding: 5px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+#julycal{
+    padding: 5px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+#augcal{
+    padding: 5px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+#septcal{
+    padding: 5px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+#octcal{
+    padding: 5px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+#novcal{
+    padding: 5px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+#deccal{
+    padding: 5px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+/* end css for index.html */
+
 
 #additem{ /* AddItem.html */
     font-family:Arial, Helvetica, san-serif;
