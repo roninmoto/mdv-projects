@@ -29,6 +29,34 @@ term: 0212
     margin-left: 20px;
 }
 
+#febcal{
+    padding: 5px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+#marcal{
+    padding: 5px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+#aprilcal{
+    padding: 5px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+#maycal{
+    padding: 5px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
 #additem{ /* AddItem.html */
     font-family:Arial, Helvetica, san-serif;
     width: 400px;
