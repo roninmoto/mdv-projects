@@ -26,7 +26,7 @@
   
   <body id="index">
   
-  	<div data-role="page" id="Home" data-theme="a">
+  	<div data-role="page" id="start" data-theme="a">
 	        <div data-role="header" data-position="fixed" data-theme="a">
 	           <h1>Appointment Keeper</h1>
 	      </div>
@@ -79,29 +79,43 @@
 <!-- January Calendar -->    
     <div data-role="page" id="jan" data-theme="a" data-add-back-btn="true "> 
       <div data-role="header" data-position="fixed" data-theme="a">
-			  <h1>January </h1>
+			  <h1>January</h1>
       </div>
         <div data-role="content">
           <ul data-role="listview" data-filter="true">
 				    <li> 
 				      <img src="images/jan.png" />
-				        <h3>January 2012 </h3>
-				          <p>Click on Calendar to add appointment.</p>
+				        <h3>January 2012</h3>
+				          <p>Click back to see other calendars.</p>
 				    </li>
           </ul>
-        <a href="additem.html" img src="images/jan.png">  </a>
+          <img src="images/jan.png" id="jancal" />
         </div>
       </div>
+    </div>
 
-
-	 </div>
+<!-- February Calendar -->    
+    <div data-role="page" id="feb" data-theme="a" data-add-back-btn="true "> 
+      <div data-role="header" data-position="fixed" data-theme="a">
+			  <h1>February</h1>
+      </div>
+        <div data-role="content">
+          <ul data-role="listview" data-filter="true">
+				    <li> 
+				      <img src="images/feb.png" />
+				        <h3>February 2012</h3>
+				          <p>Click back to see other calendars.</p>
+				    </li>
+          </ul>
+          <img src="images/feb.png" id="febcal" />
+        </div>
+      </div>
+    </div>
+ 
+<!-- Scripts to jquery and js -->    
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
-     <script type="text/javascript"  src="js/main.js"> </script>
-  
-<!--    <p id="heading">Appointment Keeper App</p>
-    <p id="desc">An app that will keep appointments for upcoming events.<br/>
-    Click the link below to get started.</p>
-    <a href="additem.html" id="link">Add&nbsp;an Appointment</a> -->
+    <script type="text/javascript"  src="js/main.js"> </script>
+
   </body>
 </html>
