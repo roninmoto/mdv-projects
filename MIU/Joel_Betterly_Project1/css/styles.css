@@ -1,11 +1,11 @@
 /*
 title: additem.html Styles
 by: Joel Betterly
-for: VFW Project 4
-term: 0112
+for: MIU Project 1
+term: 0212
 */
 
-#index{ /* Index.html */
+/*#index{ /* Index.html *?  commented out for time being
     font-family:Arial, Helvetica, san-serif;
     position: absolute;
     top: 300px;
@@ -14,7 +14,7 @@ term: 0112
     background-image: url(cal.png);
     background-repeat: no-repeat;
 }
-
+*/
 #additem{ /* AddItem.html */
     font-family:Arial, Helvetica, san-serif;
     width: 400px;
@@ -33,7 +33,7 @@ term: 0112
     line-height: 1.4
 }
 
-#desc{ /* Index.html */
+/*#desc{ /* Index.html *?
     color: blue;
     width: 100%;
     font-family: Arial, Helvetica, san-serif;
@@ -41,18 +41,18 @@ term: 0112
     line-height: 1
 }
 
-#link{ /* Index.html */
+#link{ /* Index.html *?
     color: blue;
     width: 100%;
     font-family: Arial, Helvetica, san-serif;
     font-weight: bold ;
     line-height: 1
 }
-
+*/
 #link:hover{color:green;outline: none;}
 
 /* AddItem.html from here to end*/
-h1{
+#head{
     margin: 1px 5px 5px 1px;
     text-align: center; 
     color: green;
