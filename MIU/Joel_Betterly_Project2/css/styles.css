@@ -23,12 +23,21 @@ term: 0212
     margin-left: auto;
     margin-right: auto;
 }
-
+#homebut {
+    
+    margin-left: auto;
+    margin-right: auto;
+}
 #jancal{
     padding: 5px;
     display: block;
     margin-top: 30px;
     margin-left: 20px;
+}
+#but1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #febcal{
@@ -37,7 +46,11 @@ term: 0212
     margin-top: 30px;
     margin-left: 20px;
 }
-
+#but2 {
+    
+    margin-left: auto;
+    margin-right: auto;
+}
 #marcal{
     padding: 5px;
     display: block;
