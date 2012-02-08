@@ -23,6 +23,7 @@ term: 0212
     margin-left: auto;
     margin-right: auto;
 }
+
 #homebut {
     
     margin-left: auto;
@@ -120,6 +121,16 @@ term: 0212
     margin-top: 30px;
     margin-left: 20px;
 }
+
+#help{
+    padding: 5px;
+    display: block;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+
+
 /* end css for index.html */
 
 
