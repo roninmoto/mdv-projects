@@ -201,7 +201,23 @@
             </ul>
         </div>
 <!--End second collapse button -->
-
+<!--Filmstrip-->
+        <div data-role="collapsible" data-collapsed="true" data-inset="true">
+	  <h3>Filmstrip Calendars</h3>
+            <ul data-role="listview"  data-filter="true" data-inset="true">
+                <li data-role="list-divider">2012</li>
+                <li>
+		    <a href="#filmjan" data-transition="flip">
+		    <h3>2012 Calendars</h3></a>  
+		</li>
+		<li data-role="list-divider">2011</li><!--purposely sending to same href as 2012 calendars to save typing, could easily implement if required-->
+                <li>
+		    <a href="#filmjan" data-transition="flip">
+		    <h3>2011 Calendars</h3></a>  
+		</li>
+	    </ul>
+	</div>    
+<!--End Filmstrip-->
 <!--Help button-->
     <div data-role="content" id="help">
       <a href="#help2" data-role="button" data-icon="alert" data-iconpos="left" data-theme="a">- Help -</a>
@@ -757,7 +773,47 @@
       </div>
     </div>
 
-    
+<!--filmstrip page-->
+    <div data-role="page" id="filmjan" data-theme="a" data-add-back-btn="true">
+      <div data-role="header" data-position="fixed" data-theme="e">
+	<h1>2012 Calendars</h1>
+            <div data-role="content" data-theme="a">
+              <img src="images/jan.png" id="jancal" alt="Jan Calendar" /></a><br />
+              <a href="#home" id="but2" data-role="button" data-transition="slide" data-theme="e" data-icon="arrow-l"/>Previous</a>
+              <a href="#filmfeb" id="homebut" data-role="button" data-transition="slide" data-theme="e" data-icon="arrow-r" data-iconpos="right" />Next</a>
+            </div>
+         </div>
+    </div>
+    <div data-role="page" id="filmfeb" data-theme="a" data-add-back-btn="true">
+      <div data-role="header" data-position="fixed" data-theme="e">
+	<h1>2012 Calendars</h1>
+            <div data-role="content" data-theme="a">
+              <img src="images/feb.png" id="febcal" alt="Feb Calendar" /></a><br />
+              <a href="#filmjan" id="but2" data-role="button" data-transition="slide" data-theme="e" data-icon="arrow-l" />Previous</a>
+              <a href="#filmmarch" id="homebut" data-role="button" data-transition="slide" data-theme="e" data-icon="arrow-r" data-iconpos="right" />Next</a>
+            </div>
+         </div>
+    </div>
+    <div data-role="page" id="filmmarch" data-theme="a" data-add-back-btn="true">
+      <div data-role="header" data-position="fixed" data-theme="e">
+	<h1>2012 Calendars</h1>
+            <div data-role="content" data-theme="a">
+              <img src="images/march.png" id="febcal" alt="March Calendar" /></a><br />
+              <a href="#filmfeb" id="but2" data-role="button" data-transition="slide" data-theme="e" data-icon="arrow-l" />Previous</a>
+              <a href="#filmapril" id="homebut" data-role="button" data-transition="slide" data-theme="e" data-icon="arrow-r" data-iconpos="right" />Next</a>
+            </div>
+         </div>
+    </div>
+    <div data-role="page" id="filmapril" data-theme="a" data-add-back-btn="true">
+      <div data-role="header" data-position="fixed" data-theme="e">
+	<h1>2012 Calendars</h1>
+            <div data-role="content" data-theme="a">
+              <img src="images/april.png" id="febcal" alt="March Calendar" /></a><br />
+              <a href="#filmmarch" id="but2" data-role="button" data-transition="slide" data-theme="e" data-icon="arrow-l" />Previous</a>
+              <a href="#home" id="homebut" data-role="button" data-transition="flip" data-theme="e" data-icon="arrow-r" data-iconpos="right" />Home</a>
+            </div>
+         </div>
+    </div>     
 <!--end mulitpage document-->  
 <!-- Scripts to jquery and js -->
     <script src="js/libs/modernizr.custom.min.js"></script>
