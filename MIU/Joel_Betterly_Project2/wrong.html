@@ -460,9 +460,12 @@
                 </li>
               </ul>
               <a href="additem.html" rel="external"><img src="images/nov.png" id="novcal" alt="November Calendar" /></a><br />
-              <a href="#dec" id="but2" data-role="button" data-transition="slide" data-theme="e" />December Calendar</a>
-              <a href="#home" id="homebut" data-role="button" data-transition="flip" data-theme="e" data-icon="home" />Home</a>
             </div>
+	      <fieldset class="ui-grid-a">
+		<div class="ui-block-a"><a href="#dec" id="but2" data-role="button" data-transition="slide" data-theme="e" />December Calendar</a>
+		</div>
+		<div class="ui-block-b"><a href="#home" id="homebut" data-role="button" data-transition="flip" data-theme="e" data-icon="home" />Home</a></div>
+	      </fieldset>	    
          </div>
     </div>
 
@@ -743,7 +746,7 @@
 	  </div>
       </div>
     </div>
-
+<!--Help info page 1-->
     <div data-role="page" id="helpadd" data-theme="a" data-add-back-btn="true">
       <div data-role="header" data-position="fixed" data-theme="e">
 	<h1>Adding Appt</h1>
@@ -757,7 +760,7 @@
 	  </div>
       </div>
     </div>
-
+<!--Help info page 2-->
     <div data-role="page" id="viewcal" data-theme="a" data-add-back-btn="true">
       <div data-role="header" data-position="fixed" data-theme="e">
 	<h1>View Calendar</h1>
@@ -774,11 +777,35 @@
       </div>
     </div>
 
-    
+<!--Newsfeed data-->
+    <div data-role="page" id="newsfeed" data-theme="a" data-add-back-btn="true">
+      <div data-role="header" data-theme="e">
+	<h1>NewsFeed</h1>
+	  <div data-role="content" data-theme="a">
+	    <div class="ui-grid-a">
+	      <div class="ui-block-a"><img src="images/f.png" class="ui-li-icon" /></div>
+	      <div class="ui-block-b"><p>Valentines Day on Feb 14th.  Men will spend $89.00 and women will spend $50.00 </p>
+		  <h5>Updated 1 hour ago.</h5></div>
+	    </div>
+	    <div class="ui-grid-a">
+	      <div class="ui-block-a"><img src="images/f.png" class="ui-li-icon" /></div>
+	      <div class="ui-block-b"><p>February is black history month. Special White House celebration. </p>
+		  <h5>Updated 89 min ago.</h5></div>
+	    </div>
+	    <div class="ui-grid-a">
+	      <div class="ui-block-a"><img src="images/a.png" class="ui-li-icon" /></div>
+	      <div class="ui-block-b"><p>No April fools for public schools. </p>
+		  <h5>Updated 1 day ago.</h5></div>
+	    </div>
+	    <a href="#home" id="homebut" data-role="button" data-transition="flip" data-theme="e" data-icon="home" />Home</a>
+	  </div>
+      </div>
+    </div>
+   
 <!--end mulitpage document-->  
 <!-- Scripts to jquery and js -->
     <script src="js/libs/modernizr.custom.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
     <script type="text/javascript"  src="js/main.js"> </script>
 
