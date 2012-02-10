@@ -202,21 +202,22 @@
         </div>
 <!--End second collapse button -->
 <!--Filmstrip-->
+<!--commenting out for now.
         <div data-role="collapsible" data-collapsed="true" data-inset="true">
 	  <h3>Filmstrip Calendars</h3>
             <ul data-role="listview"  data-filter="true" data-inset="true">
                 <li data-role="list-divider">2012</li>
                 <li>
-		    <a href="#filmjan" data-transition="flip">
+		    <a href="#filmjan" data-transition="pop">
 		    <h3>2012 Calendars</h3></a>  
 		</li>
-		<li data-role="list-divider">2011</li><!--purposely sending to same href as 2012 calendars to save typing, could easily implement if required-->
+		<li data-role="list-divider">2011</li>
                 <li>
-		    <a href="#filmjan" data-transition="flip">
+		    <a href="#filmjan" data-transition="pop">
 		    <h3>2011 Calendars</h3></a>  
 		</li>
 	    </ul>
-	</div>    
+      </div>    -->
 <!--End Filmstrip-->
 <!--Help button-->
     <div data-role="content" id="help">
@@ -774,23 +775,20 @@
     </div>
 
 <!--filmstrip page-->
+
     <div data-role="page" id="filmjan" data-theme="a" data-add-back-btn="true">
       <div data-role="header" data-position="fixed" data-theme="e">
 	<h1>2012 Calendars</h1>
             <div data-role="content" data-theme="a">
-              <img src="images/jan.png" id="jancal" alt="Jan Calendar" /><br />
-              <a href="#home" id="but2" data-role="button" data-transition="slide" data-theme="e" data-icon="arrow-l"/>Previous</a>
-              <a href="#filmfeb" id="homebut" data-role="button" data-transition="slide" data-theme="e" data-icon="arrow-r" data-iconpos="right" />Next</a>
-            </div>
+              <a href="#filmfeb" data-transition="slide.in"><img src="images/jan.png" id="janfilm" alt="Jan Calendar" /></a>
+	    </div>
          </div>
     </div>
     <div data-role="page" id="filmfeb" data-theme="a" data-add-back-btn="true">
       <div data-role="header" data-position="fixed" data-theme="e">
 	<h1>2012 Calendars</h1>
             <div data-role="content" data-theme="a">
-              <img src="images/feb.png" id="febcal" alt="Feb Calendar" /><br />
-              <a href="#filmjan" id="but2" data-role="button" data-transition="slide" data-theme="e" data-icon="arrow-l" />Previous</a>
-              <a href="#filmmarch" id="homebut" data-role="button" data-transition="slide" data-theme="e" data-icon="arrow-r" data-iconpos="right" />Next</a>
+              <a href="#filmmarch" data-transition="slide.in"><img src="images/feb.png" id="febfilm" alt="Feb Calendar" /></a>
             </div>
          </div>
     </div>
@@ -798,9 +796,7 @@
       <div data-role="header" data-position="fixed" data-theme="e">
 	<h1>2012 Calendars</h1>
             <div data-role="content" data-theme="a">
-              <img src="images/march.png" id="febcal" alt="March Calendar" /><br />
-              <a href="#filmfeb" id="but2" data-role="button" data-transition="slide" data-theme="e" data-icon="arrow-l" />Previous</a>
-              <a href="#filmapril" id="homebut" data-role="button" data-transition="slide" data-theme="e" data-icon="arrow-r" data-iconpos="right" />Next</a>
+              <a href="#filmapril" data-transition="slide"><img src="images/march.png" id="marchfilm" alt="March Calendar" /></a>
             </div>
          </div>
     </div>
@@ -808,10 +804,8 @@
       <div data-role="header" data-position="fixed" data-theme="e">
 	<h1>2012 Calendars</h1>
             <div data-role="content" data-theme="a">
-              <img src="images/april.png" id="febcal" alt="March Calendar" /><br />
-              <a href="#filmmarch" id="but2" data-role="button" data-transition="slide" data-theme="e" data-icon="arrow-l" />Previous</a>
-              <a href="#home" id="homebut" data-role="button" data-transition="flip" data-theme="e" data-icon="arrow-r" data-iconpos="right" />Home</a>
-            </div>
+              <a href="#home" data-transition="slide"><img src="images/april.png" id="aprilfilm" alt="April Calendar" /></a>
+           </div>
          </div>
     </div>     
 <!--end mulitpage document-->  
