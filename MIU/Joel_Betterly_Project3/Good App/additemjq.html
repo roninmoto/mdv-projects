@@ -1,0 +1,90 @@
+<!doctype html>
+<!--Joel Betterly
+    MIU
+    Project 3
+    Term 0212
+ -->
+<html>
+  <head>
+      <!--Meta Data -->
+      <meta charset="utf-8" />
+      <meta name="description" content="Keep appointments application" />
+      <meta name="keywords" content="appointments, application, html5" />
+      <meta name="robots" content="index, follow" />
+      <meta name="HandheldFriendly" content="True" />
+      <meta name="MobileOptimized" content="320" />
+      <meta http-equiv="cleartype" content="on">
+      <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+      
+      <!--title of doc -->
+      <title>Appointment Keeper App</title>
+      
+      <!--Links -->
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <div data-role="page" id="addappt" data-theme="a" data-add-back-btn="true">
+      <div data-role="header" data-position="fixed" data-theme="e">
+	<h1>Add Appointment</h1>
+            <div data-role="content" data-theme="c">
+                <form action="" method="post" id="addapptform">
+                    
+<!-- Adding drop down menu-->                    
+                    <div data-role"fieldcontain">
+                       <label for="toa" class="select">Make a Selection</label>
+                       <select name="toa" id="toa">
+                        <option value="Personal">Personal</option>
+                        <option value="Business">Business</option>
+                        <option value="Other">Other</option>
+                       </select>
+                    </div><br />
+<!-- Adding range from 1 to 10-->                    
+                    <div data-role"fieldcontain">
+                        <label for="loi">Level of Importance</label>
+                        <input type="range" name="loi" id="loi" min="1" max="10" />
+                    </div>
+<!-- Adding text field for name, date, and time-->                    
+                    <div data-role="fieldcontain">
+                        <label for="name">Name of person</label>
+                        <input type="text" name="name" id="name" value=""  />
+                    </div>                    
+                    
+                    <div data-role="fieldcontain">
+                        <label for="date">Date of Meeting</label>
+                        <input type="date" name="date" id="date" value=""  />
+                    </div>                     
+                    
+                    <div data-role="fieldcontain">
+                        <label for="time">Time of Meeting</label>
+                        <input type="time" name="time" id="time" value=""  />
+                    </div>                     
+<!--Adding checkbox -->
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                               <legend>Available for Appointment</legend>
+                               <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
+                               <label for="checkbox-1">Available</label>
+                        </fieldset>
+                    </div>
+<!-- Adding Text Area -->
+                <label for="notes">Notes</label>
+                <textarea name="notes" id="notes">
+                </textarea>
+                    
+                </form>
+
+            </div>
+         </div>
+    </div>
+    
+    
+<!-- Scripts to jquery and js -->    
+    <script src="js/libs/modernizr.custom.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+    <script src="js/libs/jquery.validate.min.js"></script>
+    <script type="text/javascript"  src="js/main.js"> </script>
+
+  </body>
+</html>   
