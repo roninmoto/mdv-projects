@@ -18,11 +18,19 @@
       
       <!--title of doc -->
       <title>Appointment Keeper App</title>
-      
+
       <!--Links -->
       <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+      <link rel="stylesheet" href="css/jquery.ui.datepicker.mobile.css" />
       <link rel="stylesheet" type="text/css" href="css/styles.css">
-  </head>
+	
+      <script>
+	//reset type=date inputs to text
+	$( document ).bind( "mobileinit", function(){
+	$.mobile.page.prototype.options.degradeInputs.date = true;
+		});	
+      </script>
+ </head>
   <body id="font">
     <div data-role="page" id="addappt" data-add-back-btn="true" data-theme="a">
       <div data-role="header" data-position="fixed" data-theme="e">
@@ -55,7 +63,7 @@
                     
                     <div data-role="fieldcontain">
                         <label for="date">Date of Meeting</label>
-                        <input type="date" name="date" id="date" data-mini="true" placeholder="dd/mm/year" class="required"  />
+                        <input type="date" id="date" name="date" />
                     </div>                     
                     
                     <div data-role="fieldcontain">
@@ -109,6 +117,8 @@
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
     <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+    <script src="js/libs/jQuery.ui.datepicker.js"></script>
+    <script src="js/libs/jquery.ui.datepicker.mobile.js"></script>
     <script type="text/javascript" src="js/main2.js"></script>
 
   </body>
