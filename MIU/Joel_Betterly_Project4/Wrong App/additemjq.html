@@ -1,0 +1,119 @@
+<!doctype html>
+<!--Joel Betterly
+    MIU
+    Project 3
+    Term 0212
+ -->
+<html>
+  <head>
+      <!--Meta Data -->
+      <meta charset="utf-8" />
+      <meta name="description" content="Keep appointments application" />
+      <meta name="keywords" content="appointments, application, html5" />
+      <meta name="robots" content="index, follow" />
+      <meta name="HandheldFriendly" content="True" />
+      <meta name="MobileOptimized" content="320" />
+      <meta http-equiv="cleartype" content="on">
+      <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+      
+      <!--title of doc -->
+      <title>Appointment Keeper App</title>
+
+      <!--Links -->
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+ </head>
+  <body id="font">
+    <div data-role="page" id="addappt" data-add-back-btn="true" data-theme="a">
+      <div data-role="header" data-position="fixed" data-theme="e">
+	<h1>Add Appointment</h1>
+      </div>
+            <div data-role="content" data-theme="c">
+                
+                <form action="" method="post" id="addapptform">
+		  
+<!-- adding submit buttons in two places, suppose to make it easier for user -->		  
+		    <div data role="fieldcontain">
+                    <input type="reset" value="Reset" id="resettop" data-theme="e">    
+                    </div>
+		    
+		    <div data role="fieldcontain">
+                        <input type="submit" value="Add Appointment" id="submit2" data-theme="e">    
+                    </div>		  
+                    
+<!-- Adding drop down menu-->                    
+                    <div data-role="fieldcontain">
+                       <label for="toa">Make a Selection</label>
+                       <select name="toa" id="toa" data-mini="true" data-native-menu="false" class="required">
+                        <option data-placeholder="true" value> Please Select One</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Business">Business</option>
+                            <option value="Other">Other</option>
+                       </select>
+                    </div><br />
+<!-- Adding range from 1 to 10-->                    
+                    <div data-role"fieldcontain">
+                        <label for="loi">Level of Importance</label>
+                        <input type="range" name="loi" id="loi" data-mini="true" min="1" max="10" placeholder="10" value="10"/>
+                    </div>
+<!-- Adding text field for name, date, and time-->                    
+                    <div data-role="fieldcontain">
+                        <label for="name">Name of person</label>
+                        <input type="text" name="name" id="name" data-mini="true" class="required" placeholder="John Doe"  />
+                    </div>                    
+                    
+                    <div data-role="fieldcontain">
+                        <label for="date">Date of Meeting</label>
+                        <input type="date" id="date" name="date" value="Today" />
+                    </div>                     
+                    
+                    <div data-role="fieldcontain">
+                        <label for="time">Time of Meeting</label>
+                        <input type="time" name="time" id="time" data-mini="true" class="required" placeholder="12:00PM"  />
+                    </div>                     
+<!--Adding checkbox -->
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                               <legend>Available for Appointment</legend>
+                               <input type="checkbox" name="checkbox-1" id="checkbox-1" data-mini="true" class="required"/>
+                               <label for="checkbox-1">Available</label>
+                        </fieldset>
+                    </div>
+<!-- Adding Text Area -->
+                    <label for="notes">Notes</label>
+                    <textarea name="notes" id="notes" data-mini="true" />
+                    </textarea><br />
+
+		    <div data role="fieldcontain">
+                    <input type="reset" value="Reset" id="reset" data-theme="e">    
+                    </div>
+		    
+		    <div data role="fieldcontain">
+                        <input type="submit" value="Add Appointment" id="submit" data-theme="e">    
+                    </div>
+<!--     <a href="#addappterrors" id="addappterrorslink" data-rel="dialog" data-transition="pop">See Errors</a> -->
+                </form>
+      </div> 
+    </div>
+    
+<!--    <div data-role="dialog" id="addappterrors">
+      <div data-role="header" data-position="fixed" data-theme="e">
+	<h1>Missing Info</h1>
+      </div>
+            <div data-role="content" data-theme="c">
+                <ul>
+                    <li>Test.</li>
+                </ul>
+            </div>
+    </div>
+-->    
+    
+<!-- Scripts to jquery and js -->    
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/main2.js"></script>
+
+  </body>
+</html>   
