@@ -26,20 +26,4 @@ $('#submit').live('click', function saveData(id) {
 });	
 
 
-//function toggleControls(n) {
-//    switch (n) {
-//    case "on":
-//        $('#addapptform').css('display', 'none');
-//        $('#clearLink').css('display', 'inline');
-//        break;
-//    case "off":
-//        $('#addapptform').css('display', 'block');
-//        $('#clearLink').css('display', 'inline');
-//        $('#list').css('display', 'none');
-//        break;
-//    default:
-//        return false;
-//    }
-//}
-
 });
