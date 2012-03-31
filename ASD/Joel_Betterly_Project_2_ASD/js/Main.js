@@ -1,3 +1,7 @@
+//Joel Betterly
+//Project 2
+//0412 ASD
+
 // Save form data to Local Storage
 //Create function that stores form into Local Storage
 //When Submit button is clicked.
