@@ -1,11 +1,11 @@
 var json = {
     "appt1":{
-        "group": ["Selection:", "Personal"],
-        "range": ["Level of Importance", "10"],
+        "toa": ["Selection:", "Personal"],
+        "loi": ["Level of Importance", "10"],
         "name": ["Name:", "lio"],
         "date": ["Date:", "01-01-2012"],
-        "tom": ["Time of Meeting:", "1200"],
-        "available": ["Available:", "Yes"],
+        "time": ["Time of Meeting:", "1200"],
+        "checkbox-1": ["Available:", "Yes"],
         "notes": ["Notes:", "Hire a translator for meeting."]
     },
     "appt2":{
