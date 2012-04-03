@@ -1,12 +1,12 @@
 {"appointments":
-[{"toa":"Personal","loi":"10","name":"lio","date":"01-01-2012","time":"1200hrs","checkbox-1":"Yes","notes":"Hire a translator for meeting."},
- {"toa":"Business","loi":"6","name":"Capt Morgan","date":"01-15-2012","time":"1300hrs","checkbox-1":"Yes","notes":"Bring Rum."},
- {"toa":"Other","loi":"2","name":"Ronald McDonald","date":"01-20-2012","time":"1600hrs","checkbox-1":"Yes","notes":"Big Macs for everyone!"},   
- {"toa":"Personal","loi":"8","name":"Daffy Duck","date":"01-12-2012","time":"1300hrs","checkbox-1":"Yes","notes":"No mocking his speech impediment."},   
- {"toa":"Personal","loi":"6","name":"Cookie Crook","date":"01-12-2012","time":"1800hrs","checkbox-1":"Yes","notes":"Lock up cereal before he arrives."},
- {"toa":"Personal","loi":"7","name":"Bugs Bunny","date":"02-01-2012","time":"1700hrs","checkbox-1":"Yes","notes":"Requested meeting in hole by highway."},
- {"toa":"Business","loi":"10","name":"Clark Kent","date":"01-16-2012","time":"1845hrs","checkbox-1":"Yes","notes":"Meeting in basement of Daily Planet."},
- {"toa":"Business","loi":"1","name":"Superman","date":"01-16-2012","time":"1845hrs","checkbox-1":"No","notes":"Prior meeting with Clark Kent, will reschedule."},
- {"toa":"Business","loi":"5","name":"Sponge Bob Square Pants","date":"01-23-2012","time":"900hrs","checkbox-1":"Yes","notes":"Bring Scuba gear, meeting in pineapple under the sea."},
- {"toa":"Business","loi":"6","name":"Johhny Quest","date":"01-24-2012","time":"1200hrs","checkbox-1":"Yes","notes":"Sueing Hadji for quiting show before end of contract."}]
+[{"toa":"Personal","loi":"10","name":"lio","date":"01-01-2012","time":"1200hrs","checkbox":"Yes","notes":"Hire a translator for meeting."},
+ {"toa":"Business","loi":"6","name":"Capt Morgan","date":"01-15-2012","time":"1300hrs","checkbox":"Yes","notes":"Bring Rum."},
+ {"toa":"Other","loi":"2","name":"Ronald McDonald","date":"01-20-2012","time":"1600hrs","checkbox":"Yes","notes":"Big Macs for everyone!"},   
+ {"toa":"Personal","loi":"8","name":"Daffy Duck","date":"01-12-2012","time":"1300hrs","checkbox":"Yes","notes":"No mocking his speech impediment."},   
+ {"toa":"Personal","loi":"6","name":"Cookie Crook","date":"01-12-2012","time":"1800hrs","checkbox":"Yes","notes":"Lock up cereal before he arrives."},
+ {"toa":"Personal","loi":"7","name":"Bugs Bunny","date":"02-01-2012","time":"1700hrs","checkbox":"Yes","notes":"Requested meeting in hole by highway."},
+ {"toa":"Business","loi":"10","name":"Clark Kent","date":"01-16-2012","time":"1845hrs","checkbox":"Yes","notes":"Meeting in basement of Daily Planet."},
+ {"toa":"Business","loi":"1","name":"Superman","date":"01-16-2012","time":"1845hrs","checkbox":"No","notes":"Prior meeting with Clark Kent, will reschedule."},
+ {"toa":"Business","loi":"5","name":"Sponge Bob Square Pants","date":"01-23-2012","time":"900hrs","checkbox":"Yes","notes":"Bring Scuba gear, meeting in pineapple under the sea."},
+ {"toa":"Business","loi":"6","name":"Johhny Quest","date":"01-24-2012","time":"1200hrs","checkbox":"Yes","notes":"Sueing Hadji for quiting show before end of contract."}]
 }
