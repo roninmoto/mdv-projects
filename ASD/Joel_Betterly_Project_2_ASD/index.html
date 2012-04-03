@@ -22,11 +22,11 @@
       <!--Links -->
       <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
       <link rel="stylesheet" type="text/css" href="css/styles.css">
-      <style type="text/css">
+<!-- Distraction, removed for now      <style type="text/css">
 	.ui-page{
 		background: transparent url(images/bg.png);
 		}
-      </style>
+      </style> -->
   </head>
   
   <body id="index">
@@ -127,14 +127,14 @@
         </div>
       </div> <!--ending div for data-role "content" -->
     <!-- Buttons to Pull External Data for JSON, XML, CSV -->
-        <div data-role="content" id="json">
-	  <a href="#json" data-role="button" data-icon="alert" data-iconpos="left" data-theme="e">- JSON -</a>
+        <div data-role="content" id="extjson">
+	  <a href="#" data-role="button" data-icon="alert" data-iconpos="left" data-theme="e" id="json">- JSON -</a>
 	</div>
-        <div data-role="content" id="xml">
-	  <a href="#xml" data-role="button" data-icon="alert" data-iconpos="left" data-theme="e">- XML -</a>
+        <div data-role="content" id="extxml">
+	  <a href="#" data-role="button" data-icon="alert" data-iconpos="left" data-theme="e" id="xml">- XML -</a>
 	</div>
-        <div data-role="content" id="csv">
-	  <a href="#cvs" data-role="button" data-icon="alert" data-iconpos="left" data-theme="e">- CSV -</a>
+        <div data-role="content" id="extcsv">
+	  <a href="#" data-role="button" data-icon="alert" data-iconpos="left" data-theme="e" id="csv">- CSV -</a>
 	</div>	
     
     <!-- This is where the outside data will be imported too when user clicks on button -->
@@ -404,7 +404,7 @@
     <script src="js/libs/modernizr.custom.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
-    <script type="text/javascript"  src="js/main.js"> </script>
+    <script type="text/javascript"  src="js/Main.js"> </script>
 
   </body>
 </html>    
