@@ -168,4 +168,34 @@ function cls() {
             }
     }
 }
-//Thanks Shanna, Jeremy, Fred, Nathan, Shea and everyone on the FcaeBook Group for your help.
+
+//Import JSON data to index.html file using id of "outsideAppt"
+//set up function for the button
+$('#json').bind('click', function(){
+    //make a <p> tag to import data into index.html
+    $('<p>').html('test').appendTo('#outsideAppt');
+    
+    //Add ajax call for json data
+    $ajax.({
+	url: 'js/json.js'
+	type: 'GET'
+	dataType: 'json'
+	success: function(yippe){
+	    //making loop through imported json data "appointments" is the header of incoming json data file
+	    for (var i=0, j=yippe.appointments.length; i<j; i++){
+		var jsonData = yippe.appointments[i];
+		// create one long concatention for each field that needs to be imported
+		$('<img src="images/' + toa + .png'"/>' +
+		  '<p>Type of Appointment: ' + jsonData.toa + '</p>' +
+		  '<p>Level of Imortance: ' + jsonData.loi + '</p>' +
+		  '<p>Name of Person: ' + jsonData.name + '</p>' +
+		  '<p>Date of Meeting: ' + jsonData.date + '</p>' +
+		  '<p>Time of Meeting: ' + jsonData.time + '</p>' +
+		  '<p>Availbility for Meeting: ' + jsonData.checkbox-1 + '</p>' +
+		  '<p>Notes: ' + jsonData.notes + '</p>').appendTo('#outsideAppt');
+		console.log(yippe);
+	    }
+	}
+    })
+    
+});
