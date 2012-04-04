@@ -6,7 +6,7 @@
         <name>lio</name>
         <date>01-01-2012</date>
         <tom>1200</tom>
-        <checkbox-1>Yes</checkbox-1>
+        <checkbox>Yes</checkbox>
         <notes>Hire a translator for meeting.</notes>
      </appt>
      
@@ -16,7 +16,7 @@
         <name>Capt Morgan</name>
         <date>01-15-2012</date>
         <tom>1300</tom>
-        <checkbox-1>Yes</checkbox-1>
+        <checkbox>Yes</checkbox>
         <notes>Bring Rum.</notes>
      </appt>
    
@@ -26,7 +26,7 @@
         <name>Ronald McDonald</name>
         <date>01-20-2012</date>
         <tom>1600</tom>
-        <checkbox-1>Yes</checkbox-1>
+        <checkbox>Yes</checkbox>
         <notes>Big Macs for everyone!</notes>
      </appt>
     
@@ -36,7 +36,7 @@
         <name>Daffy Duck</name>
         <date>01-12-2012</date>
         <tom>1300</tom>
-        <checkbox-1>Yes</checkbox-1>
+        <checkbox>Yes</checkbox>
         <notes>No mocking his speech impediment</notes>
      </appt>
    
@@ -46,7 +46,7 @@
         <name>Cookie Crook</name>
         <date>01-12-2012</date>
         <tom>1800</tom>
-        <checkbox-1>Yes</checkbox-1>
+        <checkbox>Yes</checkbox>
         <notes>Lock up cereal before he arrives.</notes>
      </appt>
  
@@ -56,7 +56,7 @@
         <name>Bugs Bunny</name>
         <date>02-01-2012</date>
         <tom>1700</tom>
-        <checkbox-1>Yes</checkbox-1>
+        <checkbox>Yes</checkbox>
         <notes>Requested meeting in hole by highway.</notes>
      </appt>
    
@@ -66,7 +66,7 @@
         <name>Clark Kent</name>
         <date>01-16-2012</date>
         <tom>1845</tom>
-        <checkbox-1>Yes</checkbox-1>
+        <checkbox>Yes</checkbox>
         <notes>Meeting in basement of Daily Planet.</notes>
      </appt>
    
@@ -76,7 +76,7 @@
         <name>Superman</name>
         <date>01-16-2012</date>
         <tom>1845</tom>
-        <checkbox-1>no</checkbox-1>
+        <checkbox>no</checkbox>
         <notes>Prior meeting with Clark Kent, will reschedule.</notes>
      </appt>
    
@@ -86,7 +86,7 @@
         <name>Sponge Bob Square Pants</name>
         <date>01-23-2012</date>
         <tom>900</tom>
-        <checkbox-1>Yes</checkbox-1>
+        <checkbox>Yes</checkbox>
         <notes>Bring Scuba gear, meeting in pineapple under the sea.</notes>
      </appt>
   
@@ -96,7 +96,7 @@
         <name>Johhny Quest</name>
         <date>01-24-2012</date>
         <tom>1200</tom>
-        <checkbox-1>Yes</checkbox-1>
+        <checkbox>Yes</checkbox>
         <notes>Sueing Hadji for quiting show before end of contract.</notes>
      </appt>
      
