@@ -5,7 +5,7 @@
 // Save form data to Local Storage
 //Create function that stores form into Local Storage
 //When Submit button is clicked.
-$('#submit').live('click', function saveLS(id) {
+$('#submit').on('click', function saveLS(id) {
     //Declare all variables from form and setup unique ID by generating a key.    
     var dt = new Date();
     var key =  (dt.getTime());
@@ -32,7 +32,8 @@ $('#submit').live('click', function saveLS(id) {
 });	
 
 //Turns on/off the form so it can display the data from Local Storage
-function toggleCtrl(t) {
+var toggleCtrl = function(t) {
+    
     switch (t) {
     case "on":
         $('#addapptform').css('display', 'none');
@@ -46,7 +47,7 @@ function toggleCtrl(t) {
 }
 
 // Pulls data from Local Storage
-$('#showData').live('click', function getData() {
+$('#showData').on('click', function getData() {
 	toggleCtrl("on"); //turning off form to display data
     var getData = $('#data')[0];
     
@@ -113,7 +114,7 @@ function editAppt(id) {
     var apptList = $('#data').css('display', 'none');
 
     // Changes made to Local Storage when you click the edit button.
-    $('#editAppt').live('click', function editAppt() {
+    $('#editAppt').on('click', function editAppt() {
         var toa =  $('#toa').val();
         var loi =  $('#loi').val();
         var name = $('#name').val();
@@ -171,7 +172,10 @@ function cls() {
 
 //Import JSON data to index.html file using id of "outsideAppt"
 //set up function for the button
-$('#json').bind('click', function(){
+$("#json").on("click", function(){
+    //have to clear data in case user clicks different button
+    $('#outsideAppt').empty();
+    
     //Add ajax call for json data
     $.ajax({
 	url: 'js/data.json',
