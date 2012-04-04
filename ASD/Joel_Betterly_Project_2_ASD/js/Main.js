@@ -195,7 +195,7 @@ $("#json").on("click", function(){
 		  '<p>Time of Meeting: ' + jsonData.time + '</p>' +
 		  '<p>Availbility for Meeting: ' + jsonData.checkbox + '</p>' +
 		  '<p>Notes: ' + jsonData.notes + '</p>' +
-		  '</li>' + '</ul>' + '</div>').appendTo('#outsideAppt');
+		  '</li>' + '<br>' + '</ul>' + '</div>').appendTo('#outsideAppt');
 		console.log(feedback);
 	    }
 	}
@@ -204,8 +204,8 @@ $("#json").on("click", function(){
     
 });
 
-//Adding XML import data to form from button xml on my index.html file going to be dumped in the <div id="outsideAppt">
-$('#xml').on ("click", function(){
+//Adding XML import data using xml button on my index.html, going to be dumped in the <div id="outsideAppt">
+$('#xml').on("click", function(){
    //clear any data in the tag
    $('#outsideAppt').empty();
     //add ajax just like json data
@@ -213,12 +213,31 @@ $('#xml').on ("click", function(){
 	url: 'js/data.xml',
 	type: 'GET',
 	dataType: 'xml',
-	success: function(feedback){
+	success: function(fdbk){
 	    //create function using find to fetch data from xml file looking for "appts", then using .each to loop through
-	    //and using .this for each field to find.
-	    $('feedback').find('appt').each(function){
-		
-	    }
+	    //and using this for each field to find.
+	    $(fdbk).find("appt").each(function(){
+		//have to declare variables for each field, then insert into the DOM with <li> tags
+		var toa = $(this).find('toa').text();
+		var loi = $(this).find('loi').text();
+		var name = $(this).find('name').text();
+		var date = $(this).find('date').text();
+		var time = $(this).find('time').text();
+		var checkbox = $(this).find('checkbox').text();
+		var notes = $(this).find('notes').text();
+		//create the DOM insertion just like json data
+		$('<div data-role="content">' + '<ul data-role="listview">' + '<li>' +
+		  '<img src="images/' + toa + '.png" />' +
+		  '<p>Type of Appointment: ' + toa + '</p>' +
+		  '<p>Level of Importance: ' + loi + '</p>' +
+		  '<p>Name of Person: ' + name + '</p>' +
+		  '<p>Date of Meeting: ' + date + '</p>' +
+		  '<p>Time of Meeting: ' + time + '</p>' +
+		  '<p>Availbility for Meeting: ' + checkbox + '</p>' +
+		  '<p>Notes: ' + notes + '</p>' +
+		  '</li>' + '<br>' + '</ul>' + '</div>').appendTo('#outsideAppt');
+		console.log(fdbk);
+	    })
 	}
-   
+       })   
 });
