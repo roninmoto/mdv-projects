@@ -203,3 +203,22 @@ $("#json").on("click", function(){
     return false;
     
 });
+
+//Adding XML import data to form from button xml on my index.html file going to be dumped in the <div id="outsideAppt">
+$('#xml').on ("click", function(){
+   //clear any data in the tag
+   $('#outsideAppt').empty();
+    //add ajax just like json data
+       $.ajax({
+	url: 'js/data.xml',
+	type: 'GET',
+	dataType: 'xml',
+	success: function(feedback){
+	    //create function using find to fetch data from xml file looking for "appts", then using .each to loop through
+	    //and using .this for each field to find.
+	    $('feedback').find('appt').each(function){
+		
+	    }
+	}
+   
+});
