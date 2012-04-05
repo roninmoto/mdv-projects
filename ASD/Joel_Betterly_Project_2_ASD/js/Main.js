@@ -172,6 +172,7 @@ function cls() {
 
 //Import JSON data to index.html file using id of "outsideAppt"
 //set up function for the button
+//this was done exactly as shown in video 5 (ajax-5-jquery) of the Ajax videos.
 $("#json").on("click", function(){
     //have to clear data in case user clicks different button
     $('#outsideAppt').empty();
@@ -205,6 +206,7 @@ $("#json").on("click", function(){
 });
 
 //Adding XML import data using xml button on my index.html, going to be dumped in the <div id="outsideAppt">
+//This is the same as video 5(ajax-5-jquery) but you have to declare variables for each field as text.
 $('#xml').on("click", function(){
    //clear any data in the tag
    $('#outsideAppt').empty();
@@ -246,4 +248,46 @@ $('#xml').on("click", function(){
 $('#csv').on("click", function(){
    //clear any data in the tag
    $('#outsideAppt').empty();
-   
+   //add ajax call just like json and xml
+   $.ajax({
+    url: 'js/data.csv',
+    type: 'GET',
+    dataType: 'text',
+    success: function(appt){
+	var text = [];
+	//using a regex to split the csv data.  Found this expression on a regex site
+        var csvData = appt.split(/[\r\n]+/);
+	//split the code with my delimiter of '|' choose the pipe to reduce errors in code.
+    	var lineOne = csvData[0].split('|');
+	
+	    //create loop to cycle through csv data	
+	    for (var i=1; i<csvData.length; i++) {
+		var data = csvData[i].split('|');
+		if (data.length == lineOne.length) {
+		var appointments = []; 
+
+	    for (var j=0; j<lineOne.length; j++) {
+		appointments.push(data[j]); 
+		}
+		text.push(appointments); 
+		}
+	    }
+	    for (var k=0; k<text.length; k++){
+		var appts = text[k];
+		
+		$('<div data-role="content">' + '<ul data-role="listview">' + '<li>' +
+		  '<img src="images/' + appts[0] + '.png" />' +
+		  '<p>Type of Appointment: ' + appts[0] + '</p>' +
+		  '<p>Level of Importance: ' + appts[1] + '</p>' +
+		  '<p>Name of Person: ' + appts[2] + '</p>' +
+		  '<p>Date of Meeting: ' + appts[3] + '</p>' +
+		  '<p>Time of Meeting: ' + appts[4] + '</p>' +
+		  '<p>Availbility for Meeting: ' + appts[5] + '</p>' +
+		  '<p>Notes: ' + appts[6] + '</p>' +
+		  '</li>' + '<br>' + '</ul>' + '</div>').appendTo('#outsideAppt');
+		console.log(text);	
+			}
+    },
+   });
+	
+});
