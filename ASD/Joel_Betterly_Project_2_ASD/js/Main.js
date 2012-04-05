@@ -241,3 +241,9 @@ $('#xml').on("click", function(){
 	}
        })   
 });
+
+//Adding csv data using csv button from index.html, csv to be dumped in the <div id="outsideAppt">
+$('#csv').on("click", function(){
+   //clear any data in the tag
+   $('#outsideAppt').empty();
+   
