@@ -264,17 +264,16 @@ $('#csv').on("click", function(){
 	    for (var i=1; i<csvData.length; i++) {
 		var data = csvData[i].split('|');
 		if (data.length == lineOne.length) {
-		var appointments = []; 
-
-	    for (var j=0; j<lineOne.length; j++) {
-		appointments.push(data[j]); 
-		}
-		text.push(appointments); 
+		    var appointments = []; 
+		    for (var j=0; j<lineOne.length; j++) {
+		    appointments.push(data[j]); 
+		    }
+		    text.push(appointments); 
 		}
 	    }
 	    for (var k=0; k<text.length; k++){
 		var appts = text[k];
-		
+		//using same dom loader as json and xml
 		$('<div data-role="content">' + '<ul data-role="listview">' + '<li>' +
 		  '<img src="images/' + appts[0] + '.png" />' +
 		  '<p>Type of Appointment: ' + appts[0] + '</p>' +
@@ -285,8 +284,7 @@ $('#csv').on("click", function(){
 		  '<p>Availbility for Meeting: ' + appts[5] + '</p>' +
 		  '<p>Notes: ' + appts[6] + '</p>' +
 		  '</li>' + '<br>' + '</ul>' + '</div>').appendTo('#outsideAppt');
-		console.log(text);	
-			}
+	    }
     },
    });
 	
