@@ -2,7 +2,7 @@
 <appts>
     <appt>
         <toa>Personal</toa>
-        <loi>10</loi>
+        <loi>2</loi>
         <name>lio</name>
         <date>01-01-2012</date>
         <tom>1200</tom>
@@ -12,7 +12,7 @@
      
     <appt>
         <toa>Business</toa>
-        <loi>6</loi>
+        <loi>2</loi>
         <name>Capt Morgan</name>
         <date>01-15-2012</date>
         <tom>1300</tom>
@@ -32,7 +32,7 @@
     
     <appt>
         <toa>Personal</toa>
-        <loi>8</loi>
+        <loi>2</loi>
         <name>Daffy Duck</name>
         <date>01-12-2012</date>
         <tom>1300</tom>
@@ -42,7 +42,7 @@
    
     <appt>
         <toa>Personal</toa>
-        <loi>6</loi>
+        <loi>2</loi>
         <name>Cookie Crook</name>
         <date>01-12-2012</date>
         <tom>1800</tom>
@@ -52,7 +52,7 @@
  
     <appt>
         <toa>Personal</toa>
-        <loi>7</loi>
+        <loi>2</loi>
         <name>Bugs Bunny</name>
         <date>02-01-2012</date>
         <tom>1700</tom>
@@ -62,7 +62,7 @@
    
     <appt>
         <toa>Business</toa>
-        <loi>10</loi>
+        <loi>2</loi>
         <name>Clark Kent</name>
         <date>01-16-2012</date>
         <tom>1845</tom>
@@ -72,7 +72,7 @@
    
     <appt>
         <toa>Business</toa>
-        <loi>1</loi>
+        <loi>2</loi>
         <name>Superman</name>
         <date>01-16-2012</date>
         <tom>1845</tom>
@@ -82,7 +82,7 @@
    
     <appt>
         <toa>Business</toa>
-        <loi>5</loi>
+        <loi>2</loi>
         <name>Sponge Bob Square Pants</name>
         <date>01-23-2012</date>
         <tom>900</tom>
@@ -92,7 +92,7 @@
   
     <appt>
         <toa>Business</toa>
-        <loi>6</loi>
+        <loi>2</loi>
         <name>Johhny Quest</name>
         <date>01-24-2012</date>
         <tom>1200</tom>
