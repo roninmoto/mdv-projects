@@ -260,7 +260,8 @@ $('#csv').on("click", function(){
 	//split the code with my delimiter of '|' choose the pipe to reduce errors in code.
     	var lineOne = csvData[0].split('|');
 	
-	    //create loop to cycle through csv data	
+	    //create loop to cycle through csv data
+	    //really wanted to use .each but couldn't figure it out and no staff to help me.
 	    for (var i=1; i<csvData.length; i++) {
 		var data = csvData[i].split('|');
 		if (data.length == lineOne.length) {
