@@ -178,40 +178,40 @@ $("#json").on("click", function(){
     $('#outsideAppt').empty();
     
     //Add ajax call for json data
-*    $.ajax({
-	url: '_view/appkeeper/appt',
-	dataType: 'json',
--	success: function(feedback){
+    $.ajax({
+	"url": "_view/appkeeper",
+	"dataType": "json",
+	"success": function(feedback){
 		$.each(feedback.rows, function(index, appt){
-			var jsonToa = appt.value.toa;
-			var jsonLoi = appt.value.loi;
-			var jsonName = appt.value.name;
-			var jsonDate = appt.value.date;
-			var jsonTime = appt.value.time;
+			var jsonToa 	 = appt.value.toa;
+			var jsonLoi 	 = appt.value.loi;
+			var jsonName 	 = appt.value.name;
+			var jsonDate 	 = appt.value.date;
+			var jsonTime 	 = appt.value.time;
 			var jsonCheckbox = appt.value.checkbox;
-			var jsonNotes = appt.value.notes;
-		}
-				
-		)
-	   
---	   
-		// create one long concatention for each field that needs to be imported
-		$('<div data-role="content">' + '<ul data-role="listview">' + '<li>' +
-		  '<img src="images/' + jsonData.toa + '.png" />' +
-		  '<p>Type of Appointment: ' + jsonData.toa + '</p>' +
-		  '<p>Level of Importance: ' + jsonData.loi + '</p>' +
-		  '<p>Name of Person: ' + jsonData.name + '</p>' +
-		  '<p>Date of Meeting: ' + jsonData.date + '</p>' +
-		  '<p>Time of Meeting: ' + jsonData.time + '</p>' +
-		  '<p>Availbility for Meeting: ' + jsonData.checkbox + '</p>' +
-		  '<p>Notes: ' + jsonData.notes + '</p>' +
-		  '</li>' + '<br>' + '</ul>' + '</div>').appendTo('#outsideAppt');
-		console.log(feedback);
---	    }
--	}
-*    });
+			var jsonNotes 	 = appt.value.notes;
+			$('#outsideAppt').append(
+					$('<div data-role="content">').append(
+							$('<ul data-role="listview">').append(
+									$('<li>').append(
+											$(
+											'<img src="images/' + jsonToa + '.png" />' +
+											'<p>Type of Appointment: ' + jsonToa + '</p>' +
+											'<p>Level of Importance: ' + jsonLoi + '</p>' +
+											'<p>Name of Person: ' + jsonName + '</p>' + 
+											'<p>Date of Meeting: ' + jsonDate + '</p>' +
+											'<p>Time of Meeting: ' + jsonTime + '</p>' +
+											'<p>Availability for Meeting: ' + jsonCheckbox + '</p>' +
+											'<p>Notes: ' + jsonNotes + '</p>' + '<br>')
+									)
+							)
 
-    
+					)
+			);
+		});
+
+	}
+    });
 });
 
 //Adding XML import data using xml button on my index.html, going to be dumped in the <div id="outsideAppt">
