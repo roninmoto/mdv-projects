@@ -172,20 +172,29 @@ function cls() {
 
 //Import JSON data to index.html file using id of "outsideAppt"
 //set up function for the button
-//this was done exactly as shown in video 5 (ajax-5-jquery) of the Ajax videos.
+//refactored code like in rick's video.
 $("#json").on("click", function(){
     //have to clear data in case user clicks different button
     $('#outsideAppt').empty();
     
     //Add ajax call for json data
-    $.ajax({
-	url: 'js/data.json',
-	type: 'GET',
+*    $.ajax({
+	url: '_view/appkeeper/appt',
 	dataType: 'json',
-	success: function(feedback){
-	    //making loop through imported json data. "appointments" is the header of incoming json data file
-	    for (var i=0, j=feedback.appointments.length; i<j; i++){
-		var jsonData = feedback.appointments[i];
+-	success: function(feedback){
+		$.each(feedback.rows, function(index, appt){
+			var jsonToa = appt.value.toa;
+			var jsonLoi = appt.value.loi;
+			var jsonName = appt.value.name;
+			var jsonDate = appt.value.date;
+			var jsonTime = appt.value.time;
+			var jsonCheckbox = appt.value.checkbox;
+			var jsonNotes = appt.value.notes;
+		}
+				
+		)
+	   
+--	   
 		// create one long concatention for each field that needs to be imported
 		$('<div data-role="content">' + '<ul data-role="listview">' + '<li>' +
 		  '<img src="images/' + jsonData.toa + '.png" />' +
@@ -198,10 +207,10 @@ $("#json").on("click", function(){
 		  '<p>Notes: ' + jsonData.notes + '</p>' +
 		  '</li>' + '<br>' + '</ul>' + '</div>').appendTo('#outsideAppt');
 		console.log(feedback);
-	    }
-	}
-    });
-    return false;
+--	    }
+-	}
+*    });
+
     
 });
 
