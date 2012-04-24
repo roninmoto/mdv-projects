@@ -1,13 +1,20 @@
 // Save form data to Local Storage
 //Create function that stores form into Local Storage
 //When Submit button is clicked.
+
+//I used the .live because I used version 1.6.4 of jquery mobile.  The reason I did this was there was a bug
+//in version 1.7.1 that caused my sliders to stop working.  They have since updated to version 1.7.2 and 
+//version 1.1.0 of jquery mobile.  Those bugs have been fixed, so you should use the current version.
+//of course switching to the current version, you would no longer use .live, you would instead use .on
+//There really is no difference in the code except changing the call.
+
 $('#submit').live('click', function saveLS(id) {
     //Declare all variables from form and setup unique ID by generating a key.    
     var dt = new Date();
     var key =  (dt.getTime());
     var toa =  $("#toa").val();
     var loi =  $("#loi").val();
-    var name = $("#name").val();
+    var name = $("#name").val();   //Use your own variable names
     var date = $("#date").val();
     var time = $("#time").val();
     //For the checkbox, we have to create a if/else statement since the value cannot be recorded
@@ -42,6 +49,8 @@ function toggleCtrl(t) {
 }
 
 // Pulls data from Local Storage
+//Use the .on call instead of .live
+
 $('#showData').live('click', function getData() {
 	toggleCtrl("on"); //turning off form to display data
     var getData = $('#data')[0];
@@ -55,6 +64,7 @@ $('#showData').live('click', function getData() {
         //adding items so list can be built for displaying like DOM
         //You have to add a <div>tag in HTML form with ID of data to import data into like the DOM.
         //Place the tag after your </form>tag but before your </body>
+        
         $('<div>').attr({'class': 'apptDiv'}).appendTo('#data');
         //Have to use concatentation to pull image.  Value 0 is the same as image name as is my appt type (personal business other)
         $('<img>').attr({'src': 'images/' + value[0] + '.png'}).appendTo('.apptDiv');
@@ -109,6 +119,8 @@ function editAppt(id) {
     var apptList = $('#data').css('display', 'none');
 
     // Changes made to Local Storage when you click the edit button.
+    //Use the .on call
+    
     $('#editAppt').live('click', function editAppt() {
         var toa =  $('#toa').val();
         var loi =  $('#loi').val();
@@ -146,7 +158,7 @@ function deleteAppt(id) {
 }
 
 // Deletes all data from Local Storage
-//To use this function you will need to add a function call from your HTML, something like this:
+//To use this function you will need to add a function call from your >>> HTML <<<, something like this:
 //<li><a href="#" onclick="cls(); location.reload();" id="cls">Clear Local Storage</a></li>
 //I placed mine in a footer navigation so that it was always available to the user
 function cls() {
@@ -164,4 +176,3 @@ function cls() {
             }
     }
 }
-//Thanks Shanna, Jeremy, Fred, Nathan, Shea and everyone on the FcaeBook Group for your help.
