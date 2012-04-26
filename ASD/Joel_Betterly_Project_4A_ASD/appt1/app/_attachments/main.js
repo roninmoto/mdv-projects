@@ -5,7 +5,8 @@ var $database = $.couch.db('appt1');
 	$.ajaxSetup ({
 		cache : false
 	});
-	//CouchDB Function
+
+//Pulls data from couch using JSON data.	
 	$('#viewappt').on('click', function(){
 		$('div#DOMin').empty();
 		$.ajax({
