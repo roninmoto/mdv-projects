@@ -1,0 +1,124 @@
+<!--Joel Betterly
+    ASD
+    Project 4A 
+    Term 0412
+    
+<!-- Project 4 was a bust, decided to start from stratch with Project 4A-->
+<!-- Copy and paste from project 3 to speed things up -->
+<html>
+  <head>
+      <!--Meta Data -->
+      <meta charset="utf-8" />
+      <meta name="description" content="Keep appointments application" />
+      <meta name="keywords" content="appointments, application, html5" />
+      <meta name="robots" content="index, follow" />
+      <meta name="HandheldFriendly" content="True" />
+      <meta name="MobileOptimized" content="320" />
+      <meta http-equiv="cleartype" content="on">
+      <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+      
+      <!--title of doc -->
+      <title>Appointment Keeper App</title>
+      
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+<!--  <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+  </head>
+  
+  <body id="index">
+  <div data-role="page" id="home" data-theme="a">
+
+<!--Header -->    
+    <div data-role="header" id="hdr" data-theme="e">
+        <h1>Appointment Keeper</h1>
+    </div>
+<!--Ends Header -->
+
+<!-- starts page content -->
+      <div data-role="content" id="content"> 
+        <div >
+          <a href="#addItems" data-role="button" data-icon="arrow-r" data-iconpos="right">Add Appointment</a>
+          <a href="#" data-role="button" id="viewappt" data-icon="arrow-r" data-iconpos="right">View Appointment</a>
+	</div>
+      </div>
+  </div>
+<!--addItems form starts here -->
+    <div data-role="page" id="addItems" data-add-back-btn="true" data-theme="c">
+        
+      <div data-role="header" id="formhead" data-theme="e">
+        <h1>Add Appointment Details</h1>
+      </div>
+      
+      <div data-role="content" data-theme="c">
+        <form action="" method="post" id="addItemsForm">
+<!-- Adding drop down menu-->            
+            <div data-role="fieldcontain">
+                <label for="toa">Make a Selection</label>
+                <select name="toa" id="toa" data-mini="true" data-native-menu="false" class="required">
+                    <option data-placeholder="true" value> Please Select One</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Business">Business</option>
+                        <option value="Other">Other</option>
+                </select>
+            </div><br />
+<!-- Adding range from 1 to 10-->                    
+            <div data-role="fieldcontain">
+                <label for="loi">Level of Importance</label>
+                <input type="range" name="loi" id="loi" data-mini="true" min="1" max="10" placeholder="5" value="5"/>
+            </div>
+<!-- Adding Text Area -->
+            <label for="notes">Notes</label>
+                <textarea name="notes" id="notes" data-mini="true" />
+                </textarea><br />            
+		    <table width "200" broder="0">
+		      <tr>
+			<td>
+			  <div data role="fieldcontain" id=addSubmit>
+			    <input type="submit" value="Add Appointment" id="submit" data-theme="e">    
+			  </div>
+			</td>
+			<td>
+			  <div data role="fieldcontain" id="editButton" style="display: none;">
+			    <input type="button" id="editAppt" value="Edit Appt"  data-theme="e"> 
+			  </div>
+			</td>  
+			<td>
+			  <div data role="fieldcontain">
+			    <input type="reset" value="Reset" id="reset" data-theme="c">    
+			  </div>
+			</td>
+		      </tr>
+		    </table>
+                </form>            
+      </div>
+      <div data-role="footer" data-theme="c">
+	<div data-role="navbar">
+	  <ul>
+	    <li><a href="#" id="showData">Show Current Appointments</a></li>
+	    <li><a href="#" onclick="cls(); location.reload();" id="cls">Clear Local Storage</a></li>
+	  </ul>
+	</div>
+      </div>    
+    </div>
+    
+<!-- Adding div for DOM insertion -->
+	<div data-role="page" id="DOMinsert" data-add-back-btn="true" data-theme="c">
+		<div data-role="header" data-position="fixed">
+		    <h1>Appointments</h1>
+		</div>
+		<div data-role="navbar" data-iconpos="left">
+		</div>
+
+
+		<div id="contain" data-role="content">
+		    <div data-role="content" id="DOMin"></div>
+		</div>	
+
+	</div>
+<!-- Scripts to jquery and js -->
+    <script src="modernizr.custom.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+    <script src="jquery.couch.js"></script>
+    <script type="text/javascript"  src="main.js"> </script>      
+  </body>
+</html>  
