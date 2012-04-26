@@ -1,12 +1,28 @@
 $(document).ready(function(){
 
-var $database = $.couch.db('appt1');
+	var $database = $.couch.db('appt1');
+	
+	$('#submit').on('click', function(x){
+		x.preventDefault();
+		var savecdb = {};
+		var dt = new Date();
+		var key = (dt.getTime());
+		savecdb._id = "appt:"+ key + $('#toa').val();
+		savecdb.toa = $("#toa").val();
+		savecdb.loi = $('#loi').val();
+		savecdb.notes = $('#notes').val();
+		$database.saveDoc(savecdb, {
+			success : function() {
+				$.mobile.changePage('#home');
+				alert("Appointment is Saved");
+			},
+		});
+	});
 
 	$.ajaxSetup ({
 		cache : false
-	});
-
-//Pulls data from couch using JSON data.	
+	});	
+	//Pulls data from couch using JSON data.	
 	$('#viewappt').on('click', function(){
 		$('div#DOMin').empty();
 		$.ajax({
@@ -37,6 +53,7 @@ var $database = $.couch.db('appt1');
 				});
 			}
 		});
-	});
+	});	
 	
+
 }); //Closing bracket for document ready
