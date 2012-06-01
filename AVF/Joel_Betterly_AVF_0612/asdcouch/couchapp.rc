@@ -1,0 +1,12 @@
+{
+  "env": {
+    "local": {
+      "db": "http://127.0.0.1:5984/apptkeeper"
+
+    },
+    "cloudant": {
+      "db": "https://ggantereverstorompledise:dqo8aH2WlhepI6jks58sDjKB@roninmoto.cloudant.com/apptkeeperdb"
+
+    }    
+  }
+}
