@@ -179,7 +179,7 @@ $("#json").on("click", function(){
     
     //Add ajax call for json data
     $.ajax({
-	"url": "_view/appkeeper",
+	"url": "_view/apptkeeper2",
 	"dataType": "json",
 	"success": function(feedback){
 		$.each(feedback.rows, function(index, appt){
