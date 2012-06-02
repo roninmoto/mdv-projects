@@ -49,7 +49,15 @@ term: 0612
     font-weight: bold ;
     line-height: 1.4
 }
+
 #construction{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#calpic{
+    padding: 5px;
+    display: block;
     margin-left: auto;
     margin-right: auto;
 }
