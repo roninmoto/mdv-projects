@@ -19,7 +19,7 @@ function Load()
 
     }
     
-    function alert() {
+    function showAlert() {
         navigator.notification.alert(
                                      'You have an Alert!', 
                                      alertDismissed,
@@ -32,11 +32,11 @@ function Load()
         alert('You selected button ' + button);
     }
     
-    function confirm() {
+    function showConfirm() {
         navigator.notification.confirm(
                                        'You are Confirmed!',
                                        onConfirm, 
                                        'Confirm',
-                                       'Exit' 
+                                       'Restart, Exit' 
                                        );
     }
