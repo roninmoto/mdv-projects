@@ -61,3 +61,8 @@ term: 0612
     margin-left: auto;
     margin-right: auto;
 }
+
+#bodygeo {
+	background-image: url(../images/bk.png);
+	background-repeat: repeat;
+}
