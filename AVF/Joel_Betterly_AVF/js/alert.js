@@ -1,11 +1,11 @@
-function Load()
+function onBodyLoad()
 	{		
 		document.addEventListener("deviceready", onDeviceReady, false);
 	}
 
 	function onDeviceReady()
 	{
-		phoneGapReady.innerHTML = ("")
+		//phoneGapReady.innerHTML = ("")
 
 	}
 	
