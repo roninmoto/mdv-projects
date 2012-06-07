@@ -23,7 +23,7 @@
 		<meta charset="utf-8">
 
 	    <link rel="stylesheet" type="text/css" href="css/styles.css">
-		<script type="text/javascript" charset="utf-8" src="js/cordova-1.7.0.js"></script>
+		<script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
 
 	</head>
  	<body id="bodygeo">
@@ -35,11 +35,11 @@
 		<div role="main" id="subcontent" class="contain">
 			<section role="main">
 				<h3>Press Button for Alert</h3>
-				<button onclick="alert();">Alert</button>
+				<button onclick="showAlert(); return false;">Alert</button>
 			</section>
 			<section>
 				<h3>Press Button for Confirm</h3>
-				<button onclick="confirm();">Confirm</button>
+				<button onclick="showConfirm(); return false;">Confirm</button>
 		</div>
 		
 		<div class="push"></div>
