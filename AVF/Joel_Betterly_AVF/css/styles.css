@@ -141,11 +141,7 @@ nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0
 		margin: 2px 0 0;
 		font-size: 10px;
 	}
-	#logo{
-		background: url(../images/logo2.png) no-repeat top left;
-		background-size: 75%;
-		height: 10px;
-	}
+
 	#calpic{
 		background: url(../css/cal2.png) no-repeat top left;
 		background-size: 75%;
