@@ -23,6 +23,12 @@
       
       <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
       <link rel="stylesheet" type="text/css" href="css/styles.css">
+      <link rel="stylesheet" type="text/css" media="print" href="styles.css" />
+      <link rel="stylesheet" type="text/css" media="only screen and (min-width: 35em)" href="styles.css" />
+      <link rel="stylesheet" type="text/css" media="all and (min-device-width: 600px)" href="styles.css" />
+      <link rel="stylesheet" type="text/css" media="all and (min-device-width: 650px)" href="styles.css" />
+      <link rel="stylesheet" type="text/css" media="all and (min-device-width: 750px)" href="styles.css" />
+      <link rel="stylesheet" type="text/css" media="all and (min-device-width: 1200px)" href="styles.css" />
       <style type="text/css">
 	.ui-page{
 		background: transparent url(images/bg.png);
@@ -56,9 +62,11 @@
         <a href="alert.html" rel="external" data-role="button">See your Alerts</a>
         <br /> 
    <!-- Button for Camera -->
-        <a href="camera.html" rel="external" data-role="button">Camera</a>
+        <a href="camera.html" rel="external" data-role="button">Take a Snapshot</a>
         <br />
-           
+   <!-- Button for Network -->
+        <a href="network.html" rel="external" data-role="button">Test Network</a>
+        <br />          
         <div data-role="collapsible" data-collapsed="true" data-inset="true">
          <h3>2012 Calendars</h3>
             <ul data-role="listview"  data-filter="true" data-inset="true">
@@ -141,16 +149,14 @@
      
 <!--ends page content -->
 
-<!--Footer nav      
+<!--Footer nav -->      
     <div data-role="footer" data-position="fixed" data-theme="e">
       <div data-role="navbar">
 	<ul>
-	  <li><a href="http://roninmoto.github.com/mdv-projects/ASD/Joel_Betterly_Project_1_ASD/index.html" rel="external" data-icon="gear">ghpages</a></li>
-	  <li><a href="https://github.com/roninmoto/mdv-projects/tree/master/ASD/Joel_Betterly_Project_1_ASD" rel="external" data-icon="star">repositories</a></li>
+	  <li><a href="index.html" rel="external" data-icon="gear">AVF Demo Page</a></li>
 	</ul>
       </div>
     </div> 
-ends footer  dont want this in crud-->
    
   </div> <!--ending div for data-role "page" (all index items must be before this ending div)-->
 
