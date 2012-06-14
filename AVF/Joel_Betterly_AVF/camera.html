@@ -1,0 +1,55 @@
+<!doctype html>
+<!--Joel Betterly
+    AVF
+    Project 3
+    Term 0612
+ -->
+<html>
+  <head>
+      <!--Meta Data -->
+      <meta charset="utf-8" />
+      <meta name="description" content="Keep appointments application" />
+      <meta name="keywords" content="appointments, application, html5" />
+      <meta name="robots" content="index, follow" />
+      <meta name="HandheldFriendly" content="True" />
+      <meta name="MobileOptimized" content="320" />
+      <meta http-equiv="cleartype" content="on">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+      
+      <!--title of doc -->
+      <title>Appointment Keeper App Photo Capture</title>
+      
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+  </head>
+    <body id="bodygeo">
+        <header>
+	  	  <button onclick="back()">Back</button>        
+          <h1 id="logo">PhotoCapture</h1>
+        </header>
+        
+        <div role="main" id="subcontent" >
+        
+	    <button onclick="capturePhoto();">Capture Photo</button>
+	    <button onclick="capturePhotoEdit();">Capture Editable Photo</button> 
+	    <!--
+		<button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button>
+	    <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button>-->
+	    
+	    <img height=200 width=200 id="myImage" />
+        
+        <div id="phoneGapReady" class="phoneGapReady"></div>
+        </div>
+        <div class="push"></div>
+        
+        <footer>
+            <p>Camera Capture Demo</p>
+        </footer>
+
+      <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+	  <script type="text/javascript" charset="utf-8" src="js/camera.js"></script
+
+    </body>
+</html>
