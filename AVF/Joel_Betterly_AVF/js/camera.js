@@ -22,22 +22,23 @@ function onPhotoDataSuccess(imageData) {
 }
 
 function onPhotoURISuccess(imageURI) {
-    var bigImage = document.getElementById('bigImage');
-    bigImage.style.display = 'block';
-    bigImage.src = imageURI;
+    var myImage = document.getElementById('myImage');
+    myImage.style.display = 'block';
+    myImage.src = imageURI;
 }
 
 function capturePhoto() {
-    navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 20, allowEdit: true });
+    navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 90, allowEdit: true, saveToPhotoAlbum: true });
 }
 
 function capturePhotoEdit() {
-    navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true });
+    navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 90, allowEdit: true, saveToPhotoAlbum: true });
 }
 
 function getPhoto(source) {
-        navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, destinationType: destinationType.FILE_URI, sourceType: source });
+        navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, destinationType: destinationType.FILE_URI, sourceType: source, saveToPhotoAlbum: true });
 }
+
 
 function onFail(message) {
     alert('Failed: ' + message);
