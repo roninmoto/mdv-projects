@@ -74,27 +74,39 @@
     bool dirtyPlace = FALSE;
     
     if ((distanceToST == 2) || (dinnerCostSweetTomatoes <= 12))  /* int and float type witb OR operator */
-    {
-        NSLog(@"Since the distance is %d miles or the meal is less than $%.2f , Sweet Tomatoes is the best option.", distanceToST, dinnerCostSweetTomatoes);
-    }
+        {
+            NSLog(@"Since the distance is %d miles or the meal is less than $%.2f , Sweet Tomatoes is the best option.", distanceToST, dinnerCostSweetTomatoes);
+        }
     else
-    {
-        NSLog(@"I don't want to drive that far or pay that much for dinner. ");
-    }
+        {
+            NSLog(@"I don't want to drive that far or pay that much for dinner. ");
+        }
     
     if ((dirtyPlace == TRUE) && (distanceToC < 2)) /* Boolean and int with AND operator */
-    {
-        NSLog(@"Chopsticks still hasn't cleaned the place up and we should go some place else.");
-    }
+        {
+            NSLog(@"Chopsticks still hasn't cleaned the place up and we should go some place else.");
+        }
     else
-    {
-        NSLog(@"Chopsticks was really clean the last time I ate there.  Also Chopsticks is %d miles away.", distanceToC);
-    }
+        {
+            NSLog(@"Chopsticks was really clean the last time I ate there.  Also Chopsticks is %d miles away.", distanceToC);
+        }
     
     
     
     /* #########  Step 4: Use an if, else if and else check using any of the data types of your choice. */
     
+    if ((dirtyPlace == TRUE) && (dinnerCostArigatos >30))
+        {
+            NSLog(@"Arigato's still has that dirty bird in the restaurant.  Plus they charge more than $30 for a meal.  I don't want to eat here.");
+        }
+    else if ((cleanPlace == TRUE) && (dinnerCostArigatos == 30))
+        {
+            NSLog(@"Arigato's has removed the bird so the place is clean, but the cost is still too much. Let's find some place else.");
+        }
+    else
+        {
+            NSLog(@"Arigato's has removed the bird and they are having a dinner special of $%.2f, let's eat there tonight.", dinnerCostArigatos);
+        }    
     
     /* #########  Step 5: Perform a single loop printing out values to the console. */
     
