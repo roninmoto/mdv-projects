@@ -25,7 +25,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    /* Step 1 Create a New Empty Application Project */
+    /* ######## Step 1 Create a New Empty Application Project */
 
     /* STORY  
      
@@ -47,7 +47,7 @@
     
     
     
-    /* Step 2: Create a variable using the float data type.  Cast the float to an int and using NSLog, output the intial float value as well as the int value. */
+    /* ######## Step 2: Create a variable using the float data type.  Cast the float to an int and using NSLog, output the intial float value as well as the int value. */
     
     float dinnerCostSweetTomatoes = 11.56f;  /* cost of dinner at cheap restaurant */
     float dinnerCostChopsticks = 16.95f;     /* Cost of dinner at medium restaurant */
@@ -65,19 +65,44 @@
     
     
     
-    /* Step 3: Perform an AND, OR comparison.  Use float, int and BOOL types.  BOOL values should be YES or NO and written in all caps. */
+    /* #########  Step 3: Perform an AND, OR comparison.  Use float, int and BOOL types.  BOOL values should be YES or NO and written in all caps. */
+    
+    int distanceToST = 2;
+    int distanceToC = 3;
+    int distanceToA = 1;
+    bool cleanPlace = TRUE;
+    bool dirtyPlace = FALSE;
+    
+    if ((distanceToST == 2) || (dinnerCostSweetTomatoes <= 12))  /* int and float type witb OR operator */
+    {
+        NSLog(@"Since the distance is %d miles or the meal is less than $%.2f , Sweet Tomatoes is the best option.", distanceToST, dinnerCostSweetTomatoes);
+    }
+    else
+    {
+        NSLog(@"I don't want to drive that far or pay that much for dinner. ");
+    }
+    
+    if ((dirtyPlace == TRUE) && (distanceToC < 2)) /* Boolean and int with AND operator */
+    {
+        NSLog(@"Chopsticks still hasn't cleaned the place up and we should go some place else.");
+    }
+    else
+    {
+        NSLog(@"Chopsticks was really clean the last time I ate there.  Also Chopsticks is %d miles away.", distanceToC);
+    }
     
     
-    /* Step 4: Use an if, else if and else check using any of the data types of your choice. */
+    
+    /* #########  Step 4: Use an if, else if and else check using any of the data types of your choice. */
     
     
-    /* Step 5: Perform a single loop printing out values to the console. */
+    /* #########  Step 5: Perform a single loop printing out values to the console. */
     
     
-    /* Step 6: Perform a nested loop printing out values to the console. */
+    /* #########  Step 6: Perform a nested loop printing out values to the console. */
     
     
-    /* Step 7: Perform a while loop that increments an int variable and outputs to the console. */
+    /* #########  Step 7: Perform a while loop that increments an int variable and outputs to the console. */
     
     
     
