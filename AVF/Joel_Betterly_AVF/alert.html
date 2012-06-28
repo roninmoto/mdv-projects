@@ -1,0 +1,56 @@
+<!doctype html>
+<!--Joel Betterly
+    AVF
+    Project 2
+    Term 0612
+ -->
+<html>
+  <head>
+      <!--Meta Data -->
+      <meta charset="utf-8" />
+      <meta name="description" content="Keep appointments application" />
+      <meta name="keywords" content="appointments, application, html5" />
+      <meta name="robots" content="index, follow" />
+      <meta name="HandheldFriendly" content="True" />
+      <meta name="MobileOptimized" content="320" />
+      <meta http-equiv="cleartype" content="on">
+      <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+      
+      <!--title of doc -->
+      <title>Appointment Keeper App</title
+
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+		<meta charset="utf-8">
+
+	    <link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+
+	</head>
+ 	<body id="bodygeo">
+	  	<header>
+	  	  <button onclick="back()">Back</button>
+			<h2 id="logo">Alerts</h2>
+		</header>
+		
+		<div role="main" id="subcontent" class="contain">
+			<section role="main">
+				<h3>Press Button for Alert</h3>
+				<button onclick="showAlert(); return false;">Alert</button>
+				<br>
+				<h3>Press Button for Confirm</h3>
+				<button onclick="showConfirm(); return false;">Confirm</button>				
+			</section>
+
+		</div>
+		
+		<div class="push">
+		</div>
+		
+		<footer id="alertfoot">
+            <p><a href="revised.html">Home</a> . Alert Demo . <a href="index.html">AVF Demo Page</a></p>
+        </footer>
+
+		<script type="text/javascript" src="js/alert.js"></script>
+
+  	</body>
+</html>
