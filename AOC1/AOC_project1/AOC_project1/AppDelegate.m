@@ -95,28 +95,44 @@
     
     /* #########  Step 4: Use an if, else if and else check using any of the data types of your choice. */
     
-    if ((dirtyPlace == TRUE) && (dinnerCostArigatos >30))
+    if ((dirtyPlace == TRUE) && (dinnerCostArigatos >30))           /* Start with if statement. */
         {
             NSLog(@"Arigato's still has that dirty bird in the restaurant.  Plus they charge more than $30 for a meal.  I don't want to eat here.");
         }
-    else if ((cleanPlace == TRUE) && (dinnerCostArigatos == 30))
+    else if ((cleanPlace == TRUE) && (dinnerCostArigatos == 30))    /* Add if else statement. */
         {
             NSLog(@"Arigato's has removed the bird so the place is clean, but the cost is still too much. Let's find some place else.");
         }
-    else
+    else                                                            /* End with else statement. */
         {
             NSLog(@"Arigato's has removed the bird and they are having a dinner special of $%.2f, let's eat there tonight.", dinnerCostArigatos);
         }    
     
-    /* #########  Step 5: Perform a single loop printing out values to the console. */
     
     
-    /* #########  Step 6: Perform a nested loop printing out values to the console. */
+    /* #########  Step 5: Perform a single loop printing out values to the console.
+       #########  Step 6: Perform a nested loop printing out values to the console. 
+       #########  Step 7: Perform a while loop that increments an int variable and outputs to the console.    Combined these together to make it more simple.*/
     
+    NSMutableArray *restaurants = [NSMutableArray arrayWithObjects:@"Sweet Tomatoes", @"Chopsticks", @"Arigato's", @"McDonald's", nil]; /* Create array for output. */
     
-    /* #########  Step 7: Perform a while loop that increments an int variable and outputs to the console. */
-    
-    
+    for (int i=0; i<3; i++)     /* for loop counts items in array. */
+    {
+        int r = i +1;
+        int stop = r;           /* Create a stop so it won't infinite loop.  */
+        NSLog(@"We can eat at: %@", [restaurants objectAtIndex:i]); /* Outputs names of restaurants but does not list Mcdonald's. */
+        
+        while (stop == 3) /* Start the while loop and checks for 4th restaurant. */
+        {
+            NSLog(@"No one wants to ever eat at McDonald's.");
+            for (int j=3; j<4; j++) /* Nested loop */
+                
+            {
+                NSLog(@"%@ is the worst place to eat.", [restaurants objectAtIndex:j]);
+            }
+            stop++;  /* Stop the loop and breaks out of loop.*/
+        }
+    }
     
     
     return YES;
