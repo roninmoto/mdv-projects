@@ -25,18 +25,59 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    /* Step 1 Create a New Empty Application Project */
+
+    /* STORY  
+     
+     I wanted to go out to eat dinner and I needed to decide which restaurant I wanted to go to eat.  I had the choice of Chopsticks (an Asian Buffet), Sweet Tomatoes (All you can eat veggie place), or Arigato’s (Japanese Steak House).
+     Since my fundage is a bit weak now, I decided that the steakhouse was out.  I also did not want to drive an hour to get dinner, so I needed to choose something close to home.  Although Sweet Tomatoes is cheap, I did not feel like eating many veggies and it is the furthest from where I live.  I was kind of in the mood for some sushi, Chopsticks was the correct fit, cheap, they are five minutes away, and they have a great variety of sushi.
+     It was really good and I ate a bunch of makki rolls and raw tuna, which is my favorite.
+     
+     
+     List
+     •	I want to eat dinner out.
+     •	Three choices to choose from, Arigato’s, Chopsticks, or Sweet Tomatoes
+     •	Decision is based on two factors combined, price and location.
+     •	Arigato’s is close but cost is $$$.
+     •	Sweet Tomatoes is furthest but cost is $
+     •	Chopsticks is close and cost is $$
+     •	Chopsticks is best answer with added bonus of sushi.
+     
+    */
+    
+    
+    
+    /* Step 2: Create a variable using the float data type.  Cast the float to an int and using NSLog, output the intial float value as well as the int value. */
+    
+    float dinnerCostSweetTomatoes = 11.56f;  /* cost of dinner at cheap restaurant */
+    float dinnerCostChopsticks = 16.95f;     /* Cost of dinner at medium restaurant */
+    float dinnerCostArigatos = 29.95f;       /* Cost of dinner at expensive restaurant */
+    int maxDinnerCost = 20.00;               /* The maximum allowed for dinner. */
+    
+    /* Cast float to int and output to NSLOG */
+    int newCostST = (int)dinnerCostSweetTomatoes;
+    NSLog(@"The cost to eat at Sweet Tomatoes is around %d dollars.", newCostST);
+    
+    /* Output the inital float value as well as the int value. */
+    NSLog(@"The cost of eating at Sweet Tomatoes is around %d dollars. The exact cost is exactly $%.2f.", newCostST, dinnerCostSweetTomatoes);
     
     
     
     
     
+    /* Step 3: Perform an AND, OR comparison.  Use float, int and BOOL types.  BOOL values should be YES or NO and written in all caps. */
     
     
+    /* Step 4: Use an if, else if and else check using any of the data types of your choice. */
     
     
+    /* Step 5: Perform a single loop printing out values to the console. */
     
     
+    /* Step 6: Perform a nested loop printing out values to the console. */
     
+    
+    /* Step 7: Perform a while loop that increments an int variable and outputs to the console. */
     
     
     
