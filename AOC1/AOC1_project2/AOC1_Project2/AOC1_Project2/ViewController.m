@@ -80,6 +80,20 @@
     }
     [self.view addSubview:publishedDate]; 
     
+//Step 6 Create a UILabel with the text "Summary".  Left justify text.
+//You guessed it, copy and paste blah blah blah.
+    
+    summary = [[UILabel alloc] initWithFrame:CGRectMake(10, 138, 100, 25)];    
+    if (summary !=nil) {
+        summary.text = @"Summary";
+        summary.textColor = [UIColor whiteColor];
+        summary.backgroundColor = [UIColor blueColor];
+        summary.textAlignment = UITextAlignmentLeft;
+    }
+    [self.view addSubview:summary]; 
+    
+    
+    
     
     
     
