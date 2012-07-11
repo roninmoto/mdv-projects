@@ -16,6 +16,8 @@
     UILabel *titleOfBook;
     UILabel *author;
     UILabel *authorName;
+    UILabel *published;
+    UILabel *publishedDate;
     
 }
 
