@@ -33,17 +33,36 @@
     }
     [self.view addSubview:titleOfBook];
     
+//Step 2 Create another label that contains the text "Author:" with the text justified right.
+//copy/paste from above and just change variable.  Change colors and lable size to match demo.png
 
+    author = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, 100, 25)];    
+    if (author !=nil) {
+        author.text = @"Author: ";
+        author.textColor = [UIColor whiteColor];
+        author.backgroundColor = [UIColor blueColor];
+        author.textAlignment = UITextAlignmentRight;
+    }
+    [self.view addSubview:author];
+    
+//Step 3 Create a UILabel to the right of the author with text justified left.    
+//Copy/Paste from above change coordinates and colors     
 
-
-
+    authorName = [[UILabel alloc] initWithFrame:CGRectMake(110, 70, 200, 25)];    
+    if (authorName !=nil) {
+        authorName.text = @"Stephen King";
+        authorName.textColor = [UIColor whiteColor];
+        authorName.backgroundColor = [UIColor blueColor];
+        authorName.textAlignment = UITextAlignmentLeft;
+    }
+    [self.view addSubview:authorName];
 
 
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 } //closing brace for background parent
 
-//Leave the rest of the code from here alone
+//Leave the rest of the code from here down alone
 
 
 - (void)viewDidUnload
