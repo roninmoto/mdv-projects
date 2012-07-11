@@ -18,6 +18,8 @@
     UILabel *authorName;
     UILabel *published;
     UILabel *publishedDate;
+    UILabel *summary;
+    
     
 }
 
