@@ -48,7 +48,7 @@
 //Step 3 Create a UILabel to the right of the author with text justified left.    
 //Copy/Paste from above change coordinates and colors     
 
-    authorName = [[UILabel alloc] initWithFrame:CGRectMake(110, 70, 200, 25)];    
+    authorName = [[UILabel alloc] initWithFrame:CGRectMake(115, 70, 200, 25)];    
     if (authorName !=nil) {
         authorName.text = @"Stephen King";
         authorName.textColor = [UIColor whiteColor];
@@ -57,7 +57,32 @@
     }
     [self.view addSubview:authorName];
 
+//Step 4 Create a uilabel on next line called "Published: " Text right justified.
+//Copy/paste step two change variable and colors
+    
+    published = [[UILabel alloc] initWithFrame:CGRectMake(10, 110, 100, 25)];    
+    if (published !=nil) {
+        published.text = @"Published: ";
+        published.textColor = [UIColor whiteColor];
+        published.backgroundColor = [UIColor blueColor];
+        published.textAlignment = UITextAlignmentRight;
+    }
+    [self.view addSubview:published];    
+//Step 5 Create a label next to the published label and add the text of when the book was publisjed, left justify text.
+//Copy/Paste, change variable and colors and coordinates just like above.
 
+    publishedDate = [[UILabel alloc] initWithFrame:CGRectMake(115, 110, 200, 25)];    
+    if (publishedDate !=nil) {
+        publishedDate.text = @"September 1978";
+        publishedDate.textColor = [UIColor whiteColor];
+        publishedDate.backgroundColor = [UIColor blueColor];
+        publishedDate.textAlignment = UITextAlignmentLeft;
+    }
+    [self.view addSubview:publishedDate]; 
+    
+    
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 } //closing brace for background parent
