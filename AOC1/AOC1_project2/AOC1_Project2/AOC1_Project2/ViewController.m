@@ -15,10 +15,25 @@
 @implementation ViewController
 
 - (void)viewDidLoad
+//Add all code here for buttons
+
+//Step 1 Change background color.
 {
+    self.view.backgroundColor = [UIColor brownColor];
+
+
+
+
+
+
+
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-}
+} //closing brace for background parent
+
+//Leave the rest of the code from here alone
+
 
 - (void)viewDidUnload
 {
