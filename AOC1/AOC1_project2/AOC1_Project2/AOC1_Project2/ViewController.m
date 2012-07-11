@@ -92,7 +92,21 @@
     }
     [self.view addSubview:summary]; 
     
+//Step 7 Create another UILabel that contains a small summary of the books plot. Text is centered span multiple lines.
+//Copy/paste blah, blah blah, make sure to add numberoflines = 9 (whatever you need) align text.
     
+    plot = [[UILabel alloc] initWithFrame:CGRectMake(10, 162, 300, 200)];    
+    if (plot !=nil) {
+        plot.text = @"A devastating flu escapes from its containment in a military biowarfare lab, killing most of the population of the world. Those who remain, immune to the disease, receive dreams that lead them to align themselves either with the forces of good, or the forces of evil, prepare for the inevitable confrontation between the two sides.";
+        
+//King, S. (1978, September). synopsis. Retrieved from http://product.half.ebay.com/The-Stand-by-Stephen-King-1990-Hardcover/157749&tg=info        
+        
+        plot.textColor = [UIColor whiteColor];
+        plot.backgroundColor = [UIColor blueColor];
+        plot.textAlignment = UITextAlignmentCenter;
+        plot.numberOfLines = 10;
+    }
+    [self.view addSubview:plot];     
     
     
     
