@@ -10,4 +10,10 @@
 
 @interface ViewController : UIViewController
 
+//Have to declare variables for the buttons to book here.
+
+{
+    UILabel *titleOfBook;
+}
+
 @end
