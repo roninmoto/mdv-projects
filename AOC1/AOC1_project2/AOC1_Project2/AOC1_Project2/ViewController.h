@@ -20,6 +20,8 @@
     UILabel *publishedDate;
     UILabel *summary;
     UILabel *plot;
+    UILabel *itemsList;
+    UILabel *arrayOutput;
     
     
 }
