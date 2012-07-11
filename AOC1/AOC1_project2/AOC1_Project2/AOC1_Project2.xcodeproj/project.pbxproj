@@ -38,21 +38,21 @@
 		1FB6B83E15ADF7670065D216 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1FB6B84015ADF7670065D216 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1FB6B84215ADF7670065D216 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1FB6B84615ADF7670065D216 /* AOC1_Project2-Info.plist */ = {isa = PBXFileReference; path = "AOC1_Project2-Info.plist"; sourceTree = "<group>"; };
+		1FB6B84615ADF7670065D216 /* AOC1_Project2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AOC1_Project2-Info.plist"; sourceTree = "<group>"; };
 		1FB6B84815ADF7670065D216 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1FB6B84A15ADF7670065D216 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1FB6B84C15ADF7670065D216 /* AOC1_Project2-Prefix.pch */ = {isa = PBXFileReference; path = "AOC1_Project2-Prefix.pch"; sourceTree = "<group>"; };
-		1FB6B84D15ADF7670065D216 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		1FB6B84C15ADF7670065D216 /* AOC1_Project2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AOC1_Project2-Prefix.pch"; sourceTree = "<group>"; };
+		1FB6B84D15ADF7670065D216 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1FB6B84E15ADF7670065D216 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1FB6B85115ADF7670065D216 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		1FB6B85415ADF7670065D216 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		1FB6B85615ADF7670065D216 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		1FB6B85615ADF7670065D216 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1FB6B85715ADF7670065D216 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1FB6B85E15ADF7670065D216 /* AOC1_Project2Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOC1_Project2Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB6B85F15ADF7670065D216 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		1FB6B86715ADF7670065D216 /* AOC1_Project2Tests-Info.plist */ = {isa = PBXFileReference; path = "AOC1_Project2Tests-Info.plist"; sourceTree = "<group>"; };
+		1FB6B86715ADF7670065D216 /* AOC1_Project2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AOC1_Project2Tests-Info.plist"; sourceTree = "<group>"; };
 		1FB6B86915ADF7670065D216 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1FB6B86B15ADF7670065D216 /* AOC1_Project2Tests.h */ = {isa = PBXFileReference; path = AOC1_Project2Tests.h; sourceTree = "<group>"; };
+		1FB6B86B15ADF7670065D216 /* AOC1_Project2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOC1_Project2Tests.h; sourceTree = "<group>"; };
 		1FB6B86C15ADF7670065D216 /* AOC1_Project2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOC1_Project2Tests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
