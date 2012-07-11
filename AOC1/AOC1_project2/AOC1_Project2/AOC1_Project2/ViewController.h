@@ -14,6 +14,9 @@
 
 {
     UILabel *titleOfBook;
+    UILabel *author;
+    UILabel *authorName;
+    
 }
 
 @end
