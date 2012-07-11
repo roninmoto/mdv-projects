@@ -19,6 +19,7 @@
     UILabel *published;
     UILabel *publishedDate;
     UILabel *summary;
+    UILabel *plot;
     
     
 }
