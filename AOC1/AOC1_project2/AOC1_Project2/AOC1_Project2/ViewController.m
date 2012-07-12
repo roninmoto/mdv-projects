@@ -30,7 +30,7 @@
     if (titleOfBook !=nil) {
         titleOfBook.text = @"The Stand";
         titleOfBook.textColor = [UIColor whiteColor];
-        titleOfBook.backgroundColor = [UIColor blueColor];
+        titleOfBook.backgroundColor = [UIColor orangeColor];
         titleOfBook.textAlignment = UITextAlignmentCenter;
     }
     [self.view addSubview:titleOfBook];
@@ -41,8 +41,8 @@
     author = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, 100, 25)];    
     if (author !=nil) {
         author.text = @"Author: ";
-        author.textColor = [UIColor whiteColor];
-        author.backgroundColor = [UIColor blueColor];
+        author.textColor = [UIColor blackColor];
+        author.backgroundColor = [UIColor whiteColor];
         author.textAlignment = UITextAlignmentRight;
     }
     [self.view addSubview:author];
@@ -54,7 +54,7 @@
     if (authorName !=nil) {
         authorName.text = @"Stephen King";
         authorName.textColor = [UIColor whiteColor];
-        authorName.backgroundColor = [UIColor blueColor];
+        authorName.backgroundColor = [UIColor magentaColor];
         authorName.textAlignment = UITextAlignmentLeft;
     }
     [self.view addSubview:authorName];
@@ -65,12 +65,12 @@
     published = [[UILabel alloc] initWithFrame:CGRectMake(10, 103, 100, 25)];    
     if (published !=nil) {
         published.text = @"Published: ";
-        published.textColor = [UIColor whiteColor];
-        published.backgroundColor = [UIColor blueColor];
+        published.textColor = [UIColor darkGrayColor];
+        published.backgroundColor = [UIColor redColor];
         published.textAlignment = UITextAlignmentRight;
     }
     [self.view addSubview:published];    
-//Step 5 Create a label next to the published label and add the text of when the book was publisjed, left justify text.
+//Step 5 Create a label next to the published label and add the text of when the book was published, left justify text.
 //Copy/Paste, change variable and colors and coordinates just like above.
 
     publishedDate = [[UILabel alloc] initWithFrame:CGRectMake(115, 103, 200, 25)];    
@@ -88,8 +88,8 @@
     summary = [[UILabel alloc] initWithFrame:CGRectMake(10, 130, 100, 25)];    
     if (summary !=nil) {
         summary.text = @"Summary";
-        summary.textColor = [UIColor whiteColor];
-        summary.backgroundColor = [UIColor blueColor];
+        summary.textColor = [UIColor yellowColor];
+        summary.backgroundColor = [UIColor purpleColor];
         summary.textAlignment = UITextAlignmentLeft;
     }
     [self.view addSubview:summary]; 
@@ -103,8 +103,8 @@
         
 //King, S. (1978, September). synopsis. Retrieved from http://product.half.ebay.com/The-Stand-by-Stephen-King-1990-Hardcover/157749&tg=info        
         
-        plot.textColor = [UIColor whiteColor];
-        plot.backgroundColor = [UIColor blueColor];
+        plot.textColor = [UIColor lightGrayColor];
+        plot.backgroundColor = [UIColor blackColor];
         plot.textAlignment = UITextAlignmentCenter;
         plot.numberOfLines = 9;
     }
@@ -136,19 +136,19 @@
     itemsList = [[UILabel alloc] initWithFrame:CGRectMake(10, 360, 130, 25)];    
     if (itemsList !=nil) {
         itemsList.text = @"List of Items: ";
-        itemsList.textColor = [UIColor whiteColor];
-        itemsList.backgroundColor = [UIColor blueColor];
+        itemsList.textColor = [UIColor orangeColor];
+        itemsList.backgroundColor = [UIColor yellowColor];
         itemsList.textAlignment = UITextAlignmentLeft;
     }
     [self.view addSubview:itemsList];   
     
 //Step 4 create a label set the text nsmutablestring text. increse lines text is cenetered.
     
-    arrayOutput = [[UILabel alloc] initWithFrame:CGRectMake(10, 385, 300, 100)];    
+    arrayOutput = [[UILabel alloc] initWithFrame:CGRectMake(10, 385, 300, 60)];    
     if (arrayOutput !=nil) {
         arrayOutput.text = mutableString;
-        arrayOutput.textColor = [UIColor whiteColor];
-        arrayOutput.backgroundColor = [UIColor blueColor];
+        arrayOutput.textColor = [UIColor redColor];
+        arrayOutput.backgroundColor = [UIColor greenColor];
         arrayOutput.textAlignment = UITextAlignmentLeft;
         arrayOutput.numberOfLines = 9;
     }
