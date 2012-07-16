@@ -38,21 +38,21 @@
 		1FBAF4D815B452F30084745C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1FBAF4DA15B452F30084745C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1FBAF4DC15B452F30084745C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1FBAF4E015B452F30084745C /* AOC1 Project3-Info.plist */ = {isa = PBXFileReference; path = "AOC1 Project3-Info.plist"; sourceTree = "<group>"; };
+		1FBAF4E015B452F30084745C /* AOC1 Project3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AOC1 Project3-Info.plist"; sourceTree = "<group>"; };
 		1FBAF4E215B452F30084745C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1FBAF4E415B452F30084745C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1FBAF4E615B452F30084745C /* AOC1 Project3-Prefix.pch */ = {isa = PBXFileReference; path = "AOC1 Project3-Prefix.pch"; sourceTree = "<group>"; };
-		1FBAF4E715B452F30084745C /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		1FBAF4E615B452F30084745C /* AOC1 Project3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AOC1 Project3-Prefix.pch"; sourceTree = "<group>"; };
+		1FBAF4E715B452F30084745C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1FBAF4E815B452F30084745C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1FBAF4EB15B452F30084745C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		1FBAF4EE15B452F30084745C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		1FBAF4F015B452F30084745C /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		1FBAF4F015B452F30084745C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1FBAF4F115B452F30084745C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1FBAF4F815B452F30084745C /* AOC1 Project3Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AOC1 Project3Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBAF4F915B452F30084745C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		1FBAF50115B452F30084745C /* AOC1 Project3Tests-Info.plist */ = {isa = PBXFileReference; path = "AOC1 Project3Tests-Info.plist"; sourceTree = "<group>"; };
+		1FBAF50115B452F30084745C /* AOC1 Project3Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AOC1 Project3Tests-Info.plist"; sourceTree = "<group>"; };
 		1FBAF50315B452F30084745C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1FBAF50515B452F30084745C /* AOC1_Project3Tests.h */ = {isa = PBXFileReference; path = AOC1_Project3Tests.h; sourceTree = "<group>"; };
+		1FBAF50515B452F30084745C /* AOC1_Project3Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOC1_Project3Tests.h; sourceTree = "<group>"; };
 		1FBAF50615B452F30084745C /* AOC1_Project3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOC1_Project3Tests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
