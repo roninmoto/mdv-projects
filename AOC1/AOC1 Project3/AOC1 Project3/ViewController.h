@@ -16,5 +16,6 @@
 -(int)firstNum:(int)num1 secondNum:(int)num2;
 -(void) displayAlertWithString:(NSString*)string;
 -(NSString*)part1:(NSString*)string1 part2:(NSString*)string2;
+-(bool)compareOne:(NSInteger)numOne compareTwo:(NSInteger)numTwo;
 
 @end
