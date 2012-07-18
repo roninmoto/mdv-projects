@@ -26,32 +26,61 @@
     
     int addFunc = [self firstNum:2 secondNum:3];
     NSNumber *combinedResult = [[NSNumber alloc] initWithInt:addFunc];
-    NSString *stringNum = [NSString stringWithFormat:@"The result is "];
+    NSString *stringNum = [NSString stringWithFormat:@"The number is "];
     NSString *convertToString = [combinedResult stringValue];
     NSString *convertedString = [self part1:stringNum part2:convertToString]; //part1, part2 variables are pulled from append function
     [self displayAlertWithString:convertedString]; //displays the alert onscreen. Uses the append function to combine the result text to display with the values that were combined.
+
+//2. Create a function called compare that takes two NSIntegers values.  Return the true or false or ==.    
+ 
+    NSInteger numOne = 5;
+    NSInteger numTwo = 8;
+    bool compare = [self compareOne:numOne compareTwo:numTwo];
     
+    if (compare == true) {
+        NSLog(@"good to go.");
+    }else {
+        NSLog(@"failure");
+    }
+//    NSString *test = [NSString stringWithFormat:@"The result is %@", result ? @"true" : @"false"];
+//    [self displayAlertWithString:result];
 
 }
 
-
-//1. The Add Function
+// //////////////////////
+//1. The Add Function //
+// ////////////////////
 
 -(int)firstNum:(int)num1 secondNum:(int)num2{
     return num1 + num2; // we added the two int's together and now return them.
 }
 
-//2. The Compare Function.
+// ///////////////////////////
+//2. The Compare Function. //
+// /////////////////////////
 
-//3. The Append Function.
+-(bool)compareOne:(NSInteger)numOne compareTwo:(NSInteger)numTwo{
+    
+    if (numOne == numTwo) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// //////////////////////////
+//3. The Append Function. //
+// ////////////////////////
 -(NSString *)part1:(NSString *)string1 part2:(NSString *)string2{
     NSMutableString *part1String = [NSMutableString stringWithString:string1];
     NSString *newString = [part1String stringByAppendingString:string2];
     return newString;
 }
 
-
-//4. Create the displayAlertWithString Function
+// //////////////////////////////////////
+//5. DisplayAlertWithString Function. //
+// ////////////////////////////////////
+// Create the displayAlertWithString Function
 // Wendy shows how to write this function in video 34.3_UIAlertIndicator.
 
 -(void)displayAlertWithString:(NSString *)string{
