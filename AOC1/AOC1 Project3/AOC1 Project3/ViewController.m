@@ -25,25 +25,24 @@
 //1. Create a function called Add.  This function will take two int values and return the result of an addition between them.
     
     int addFunc = [self firstNum:2 secondNum:3];
-    NSNumber *combinedResult = [[NSNumber alloc] initWithInt:addFunc];
-    NSString *stringNum = [NSString stringWithFormat:@"The number is "];
+    NSNumber *combinedResult = [[NSNumber alloc] initWithInt:addFunc];  //Step 6 - 8
+    NSString *stringNum = [NSString stringWithFormat:@"The number is "]; 
     NSString *convertToString = [combinedResult stringValue];
     NSString *convertedString = [self part1:stringNum part2:convertToString]; //part1, part2 variables are pulled from append function
     [self displayAlertWithString:convertedString]; //displays the alert onscreen. Uses the append function to combine the result text to display with the values that were combined.
 
-//2. Create a function called compare that takes two NSIntegers values.  Return the true or false or ==.    
+//2. Create a function called compare that takes two NSIntegers values.  Return the true or false are ==.    
  
     NSInteger numOne = 5;
-    NSInteger numTwo = 8;
+    NSInteger numTwo = 5;
     bool compare = [self compareOne:numOne compareTwo:numTwo];
     
     if (compare == true) {
-        NSLog(@"good to go.");
+        [self displayAlertWithString:[NSString stringWithFormat:@"Integer one is: %i and Integer two is: %i.  They are equal.",numOne, numTwo]];  //Step 9
     }else {
-        NSLog(@"failure");
+        [self displayAlertWithString:[NSString stringWithFormat:@"Integer one is: %i and Integer two is: %i.  They are NOT equal.",numOne, numTwo]];
     }
-//    NSString *test = [NSString stringWithFormat:@"The result is %@", result ? @"true" : @"false"];
-//    [self displayAlertWithString:result];
+
 
 }
 
