@@ -95,6 +95,22 @@
         loginTxt.text = [NSString stringWithFormat:@"User: '%@' has been logged in.", user];
         loginTxt.backgroundColor = [UIColor grayColor];
         loginTxt.numberOfLines = 3;
+        
+//4-Date. Display a UIAlertView with the current date and time displayed in the format seen in the dateAlert graphic.  You must use NSDAte object to gather the date and time info.
+        
+    }else if (button.tag == DATE_BUTTON) {
+        NSDate *date = [NSDate date];
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        if (dateFormat !=nil) {
+            [dateFormat setDateStyle:NSDateFormatterLongStyle];  //using built-in formatting instead of manually doing it.
+            [dateFormat setTimeStyle:NSDateFormatterLongStyle];
+            NSString* dateLabel = [dateFormat stringFromDate:date];
+            UIAlertView *dateAlert = [[UIAlertView alloc] initWithTitle:@"Date" message:dateLabel delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            if (dateAlert != nil) {
+                [dateAlert show];
+            }
+            
+        }
     }
 }
     
