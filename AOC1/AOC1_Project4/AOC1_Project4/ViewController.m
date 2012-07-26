@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #define LOGIN_BUTTON 0 
 #define DATE_BUTTON 1
+#define INFO_BUTTON 2
 
 @interface ViewController ()
 
@@ -18,7 +19,11 @@
 
 - (void)viewDidLoad
 {
-//Part I Steps 1-6    
+    
+//////////////////////    
+//Part I Steps 1-6 //
+////////////////////
+    
 //1. Create a UILabel near the top of screen with Username in it.   
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 5.0f, 90.0f, 30.0f)];
@@ -56,24 +61,51 @@
         [self.view addSubview:loginTxt];
         
     }
-//Part II Date Button
-//1-Date. Create a UIButton using the rounded reteangle type, give button any color.
+    
+/////////////////////////    
+//Part II Date Button //
+///////////////////////
+    
+    
+//1-Part II. Create a UIButton using the rounded reteangle type, give button any color.
     
     UIButton *dButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if (dButton != nil){
-
         dButton.frame = CGRectMake(5.0f, 170.0f, 100.0f, 30.0f);
         
-//2-Date. Add text "Show Date" to button.  
+//2-Part II. Add text "Show Date" to button.  
         
         [dButton setTitle:@"Show Date" forState:UIControlStateNormal];
         
-//3-Date. Add an action to the button that when clicked, it will call the same onClick function.  Add a tag to the date button so you know when the button was pressed.
+//3-Part II. Add an action to the button that when clicked, it will call the same onClick function.  Add a tag to the date button so you know when the button was pressed.
         
         dButton.tag = DATE_BUTTON;
         [dButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:dButton];
     }
+
+/////////////////////////////////    
+//Part III Information Button //
+///////////////////////////////
+    
+    
+//1-Part III. Create A UIButton using either the light or dark button and place at bottom of screen.
+    
+    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoDark];
+    if (infoButton != nil) {
+        infoButton.frame = CGRectMake(5.0f, 260.0f, 25.0f, 25.0f);
+        infoButton.tag = INFO_BUTTON;
+        [infoButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:infoButton];
+    }
+    
+//2-Part III. Create a UILabel beneath it that contains no inital text.    
+    
+    myData = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 290.0f, 300.0f, 70.0f)];
+    if (myData != nil) {
+    
+    }
+    [self.view addSubview:myData];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -96,7 +128,7 @@
         loginTxt.backgroundColor = [UIColor grayColor];
         loginTxt.numberOfLines = 3;
         
-//4-Date. Display a UIAlertView with the current date and time displayed in the format seen in the dateAlert graphic.  You must use NSDAte object to gather the date and time info.
+//4-Part II. Display a UIAlertView with the current date and time displayed in the format seen in the dateAlert graphic.  You must use NSDAte object to gather the date and time info.
         
     }else if (button.tag == DATE_BUTTON) {
         NSDate *date = [NSDate date];
@@ -105,12 +137,15 @@
             [dateFormat setDateStyle:NSDateFormatterLongStyle];  //using built-in formatting instead of manually doing it.
             [dateFormat setTimeStyle:NSDateFormatterLongStyle];
             NSString* dateLabel = [dateFormat stringFromDate:date];
-            UIAlertView *dateAlert = [[UIAlertView alloc] initWithTitle:@"Date" message:dateLabel delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            UIAlertView *dateAlert = [[UIAlertView alloc] initWithTitle:@"Date & Time" message:dateLabel delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
             if (dateAlert != nil) {
                 [dateAlert show];
             }
             
         }
+    }else if (button.tag == INFO_BUTTON) {
+        myData.text = @"This application was created by: Joel Betterly";
+        myData.numberOfLines = 2;
     }
 }
     
