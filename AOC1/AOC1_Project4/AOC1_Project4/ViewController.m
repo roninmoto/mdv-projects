@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+//declare login button for tag
+#define LOGIN_BUTTON = 0  
 
 @interface ViewController ()
 
@@ -23,13 +25,24 @@
     }
     [self.view addSubview:label];    
 //2. Create a UITextField to the right of the username label.
-    userNameTxt = [[UITextField alloc] initWithFrame:CGRectMake(100.0f, 10.0f, 200.0f, 30.0f)];
+    userNameTxt = [[UITextField alloc] initWithFrame:CGRectMake(100.0f, 8.0f, 200.0f, 30.0f)];
     if (userNameTxt != nil){
         userNameTxt.borderStyle = UITextBorderStyleRoundedRect;
         [self.view addSubview:userNameTxt];
     }
     
+//3. Create a rounded rectangle UIButton of any color under the UITextField with the text "Login" on it.
     
+    UIButton *loginTextButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    if (loginTextButton != nil){
+     //   loginTextButton.tag = LOGIN_BUTTON;
+        loginTextButton.frame = CGRectMake(225.0f, 45.0f, 75.0f, 35.0f);
+        [loginTextButton setTitle:@"Login" forState:UIControlStateNormal];
+        [loginTextButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+        loginTextButton.tintColor = [UIColor blueColor];
+        [self.view addSubview:loginTextButton];
+        
+    }
     
     
     [super viewDidLoad];
