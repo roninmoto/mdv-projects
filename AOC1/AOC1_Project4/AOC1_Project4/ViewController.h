@@ -12,6 +12,8 @@
 {
     UITextField *userNameTxt;
     UILabel *loginTxt;
+    UILabel *myData;
+    
 }
 
 @end
