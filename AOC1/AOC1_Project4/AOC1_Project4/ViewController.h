@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 {
     UITextField *userNameTxt;
+    UILabel *loginTxt;
 }
 
 @end
