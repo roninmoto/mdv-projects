@@ -16,6 +16,22 @@
 
 - (void)viewDidLoad
 {
+//1. Create a UILabel near the top of screen with Username in it.    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 5.0f, 90.0f, 30.0f)];
+    if (label !=nil){
+        label.text =@"Username:";
+    }
+    [self.view addSubview:label];    
+//2. Create a UITextField to the right of the username label.
+    userNameTxt = [[UITextField alloc] initWithFrame:CGRectMake(100.0f, 10.0f, 200.0f, 30.0f)];
+    if (userNameTxt != nil){
+        userNameTxt.borderStyle = UITextBorderStyleRoundedRect;
+        [self.view addSubview:userNameTxt];
+    }
+    
+    
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
