@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#define LOGIN_BUTTON 0  
+#define LOGIN_BUTTON 0 
+#define DATE_BUTTON 1
 
 @interface ViewController ()
 
@@ -17,13 +18,17 @@
 
 - (void)viewDidLoad
 {
-//1. Create a UILabel near the top of screen with Username in it.    
+//Part I Steps 1-6    
+//1. Create a UILabel near the top of screen with Username in it.   
+    
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 5.0f, 90.0f, 30.0f)];
     if (label !=nil){
         label.text =@"Username:";
     }
-    [self.view addSubview:label];    
+    [self.view addSubview:label];
+    
 //2. Create a UITextField to the right of the username label.
+    
     userNameTxt = [[UITextField alloc] initWithFrame:CGRectMake(100.0f, 8.0f, 200.0f, 30.0f)];
     if (userNameTxt != nil){
         userNameTxt.borderStyle = UITextBorderStyleRoundedRect;
@@ -43,7 +48,7 @@
         
 //4. Create another UILabel beneath with the default text "Please Enter Username".
         
-        loginTxt = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 90.0f, 300.0f, 70.0f)];
+        loginTxt = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 90.0f, 300.0f, 70.0f)];
         if (loginTxt != nil){
             loginTxt.text = @"Please Enter Username.";
             loginTxt.backgroundColor = [UIColor lightGrayColor];
@@ -51,7 +56,24 @@
         [self.view addSubview:loginTxt];
         
     }
+//Part II Date Button
+//1-Date. Create a UIButton using the rounded reteangle type, give button any color.
     
+    UIButton *dButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    if (dButton != nil){
+
+        dButton.frame = CGRectMake(5.0f, 170.0f, 100.0f, 30.0f);
+        
+//2-Date. Add text "Show Date" to button.  
+        
+        [dButton setTitle:@"Show Date" forState:UIControlStateNormal];
+        
+//3-Date. Add an action to the button that when clicked, it will call the same onClick function.  Add a tag to the date button so you know when the button was pressed.
+        
+        dButton.tag = DATE_BUTTON;
+        [dButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:dButton];
+    }
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
