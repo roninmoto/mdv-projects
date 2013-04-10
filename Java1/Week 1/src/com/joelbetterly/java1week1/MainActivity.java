@@ -3,6 +3,7 @@
  * Package: com.joelbetterly.java1week1
  * @author: Joel Betterly
  * Date: 	Apr 10, 2013
+ * Added to git on Apr 10 1:38pm
  */
 package com.joelbetterly.java1week1;
 
