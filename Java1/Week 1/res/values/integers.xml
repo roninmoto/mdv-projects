@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="adult">20</integer>
+    <integer name="teen">15</integer>
+    <integer name="kid">10</integer>
+    <integer name="tot">5</integer>
+</resources>
