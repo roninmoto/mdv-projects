@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="adult">20</integer>
+    <integer name="teen">15</integer>
+    <integer name="kid">10</integer>
+    <integer name="tot">5</integer>
+    <integer name="adult2">25</integer>
+    <integer name="teen2">20</integer>
+    <integer name="kid2">15</integer>
+    <integer name="tot2">10</integer>
+</resources>
