@@ -43,7 +43,7 @@ public class MainActivity extends Activity
 		
 		//Add the TextView
 		TextView tv = new TextView(this);
-		tv.setText("% based on Tips");
+		tv.setText("Percentage of tips earned at the \n car wash by each age group \n\n Please enter the total tip amount earned.\n");
 		ll.addView(tv);
 		
 		//Add edit text for click event
@@ -90,38 +90,38 @@ public class MainActivity extends Activity
 							"Tot Tips: " + numTot + "\r\n");
 					
 					//Loop to figure out who gets paid what amount, include array with Strings
-					String[] adultPeople = {"Joe - 25", "Ben -22"};
+					String[] adultPeople = {"Joe, age 25", "Ben, age 22"};
 					int adtPpl = adultPeople.length;
 					for (int i=0; i<adtPpl; i++)
 					{
 						//Create a float value for tips for each group
 						double tip1;
 						tip1 = numAdult;
-						giveMoney.append("Tips " + adultPeople[i] + "- $" + tip1 + " earned /n");
+						giveMoney.append(adultPeople[i] + " earned: $" + tip1 + " in tips at the car wash. \n");
 					}
-					String[] teenPeople = {"Suzy - 18", "Cheryl - 17"};
+					String[] teenPeople = {"Suzy, age 18", "Cheryl, age 17"};
 					int teenPpl = teenPeople.length;
 					for (int i=0; i<teenPpl; i++)
 					{
 						double tip2;
 						tip2 = numTeen;
-						giveMoney.append("Tips " + teenPeople[i] + "- $" + tip2 + " earned /n");
+						giveMoney.append(teenPeople[i] + " earned: $" + tip2 + " in tips at the car wash \n");
 					}
-					String[] kidPeople = {"Carl - 12", "Herman - 8"};
+					String[] kidPeople = {"Carl, age 12", "Herman, age 8"};
 					int kidPpl = kidPeople.length;
 					for (int i=0; i<kidPpl; i++)
 					{
 						double tip3;
 						tip3 = numKid;
-						giveMoney.append("Tips " + kidPeople[i] + "- $" + tip3 + " earned /n");
+						giveMoney.append(kidPeople[i] + " earned: $" + tip3 + " in tips at the car wash \n");
 					}
-					String[] totPeople = {"Bella - 1", "Jada - 2"};
+					String[] totPeople = {"Bella, age 1", "Jada, age 2"};
 					int totPpl = totPeople.length;
 					for (int i=0; i<totPpl; i++)
 					{
 						double tip4;
 						tip4 = numTot;
-						giveMoney.append("Tips " + totPeople[i] + "- $" + tip4 + " earned /n");
+						giveMoney.append(totPeople[i] + " earned: $" + tip4 + " but the money was given to thier Mom. \n");
 					}		
 				}else{
 					outcome.setText("Adult Tips: " + numAdult2 + "\r\n" +
@@ -129,39 +129,39 @@ public class MainActivity extends Activity
 							"Kid Tips: " + numKid2 + "\r\n" +
 							"Tot Tips: " + numTot2 + "\r\n");
 					
-					String[] adultPeople = {"Joe - 25", "Ben -22"};
+					String[] adultPeople = {"Joe, age 25", "Ben, age 22"};
 					int adtPpl = adultPeople.length;
 					for (int i=0; i<adtPpl; i++)
 					{
 						//Create a float value for tips for each group
 						double tip5;
 						tip5 = numAdult2;
-						giveMoney.append("Tips " + adultPeople[i] + "- $" + tip5 + " earned /n");
+						giveMoney.append(adultPeople[i] + " earned: $" + tip5 + " in tips at the car wash \n");
 					}
 					
-					String[] teenPeople = {"Suzy - 18", "Cheryl - 17"};
+					String[] teenPeople = {"Suzy, age 18", "Cheryl, age 17"};
 					int teenPpl = teenPeople.length;
 					for (int i=0; i<teenPpl; i++)
 					{
 						double tip6;
 						tip6 = numTeen2;
-						giveMoney.append("Tips " + teenPeople[i] + "- $" + tip6 + " earned /n");
+						giveMoney.append(teenPeople[i] + " earned: $" + tip6 + " in tips at the car wash \n");
 					}
-					String[] kidPeople = {"Carl - 12", "Herman - 8"};
+					String[] kidPeople = {"Carl, age12", "Herman, age 8"};
 					int kidPpl = kidPeople.length;
 					for (int i=0; i<kidPpl; i++)
 					{
 						double tip7;
 						tip7 = numKid2;
-						giveMoney.append("Tips " + kidPeople[i] + "- $" + tip7 + " earned /n");
+						giveMoney.append(kidPeople[i] + " earned: $" + tip7 + " in tips at the car wash \n");
 					}
-					String[] totPeople = {"Bella - 1", "Jada - 2"};
+					String[] totPeople = {"Bella, age 1", "Jada, age 2"};
 					int totPpl = totPeople.length;
 					for (int i=0; i<totPpl; i++)
 					{
 						double tip8;
-						tip8 = numTot2;
-						giveMoney.append("Tips " + totPeople[i] + "- $" + tip8 + " earned /n");
+						tip8 = 0;
+						giveMoney.append(totPeople[i] + " earned: $" + tip8 + " is too young to work at the car wash \n");
 					}
 				}
 			}
