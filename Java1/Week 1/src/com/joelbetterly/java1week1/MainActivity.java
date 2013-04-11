@@ -26,7 +26,9 @@ public class MainActivity extends Activity
 	LinearLayout ll;
 	LinearLayout.LayoutParams lp;
 	EditText et;
-	
+	double tip = .01;
+	TextView outcome;
+	TextView giveMoney;
 	
 	
 	@Override
@@ -60,11 +62,127 @@ public class MainActivity extends Activity
 			{
 				// Setup Integers for each group
 				int adult = getResources().getInteger(R.integer.adult);
+				int adult2 = getResources().getInteger(R.integer.adult2);
 				int teen = getResources().getInteger(R.integer.teen);
+				int teen2 = getResources().getInteger(R.integer.teen2);
 				int kid = getResources().getInteger(R.integer.kid);
+				int kid2 = getResources().getInteger(R.integer.kid2);
 				int tot = getResources().getInteger(R.integer.tot);
+				int tot2 = getResources().getInteger(R.integer.tot2);
+				
+				//Get value from field convert to string
+				int valueInput = Integer.parseInt(et.getText().toString());
+				
+				double numAdult = (tip*adult)*valueInput;
+				double numAdult2 = (tip*adult2)*valueInput;
+				double numTeen = (tip*teen)*valueInput;
+				double numTeen2 = (tip*teen2)*valueInput;
+				double numKid = (tip*kid)*valueInput;
+				double numKid2 = (tip*kid2)*valueInput;
+				double numTot = (tip*tot)*valueInput;
+				double numTot2 = (tip*tot2)*valueInput;
+				
+				//Conditional statement determining what to do with the tips
+				if(valueInput >= 100)
+				{
+					outcome.setText("Adult Tips: " + numAdult + "\r\n" +
+							"Teen Tips: " + numTeen + "\r\n" +
+							"Kid Tips: " + numKid + "\r\n" +
+							"Tot Tips: " + numTot + "\r\n");
+					
+					//Loop to figure out who gets paid what amount, include array with Strings
+					String[] adultPeople = {"Joe - 25", "Ben -22"};
+					int adtPpl = adultPeople.length;
+					for (int i=0; i<adtPpl; i++)
+					{
+						//Create a float value for tips for each group
+						double tip1;
+						tip1 = numAdult;
+						giveMoney.append("Tips " + adultPeople[i] + "- $" + tip1 + " earned /n");
+					}
+					String[] teenPeople = {"Suzy - 18", "Cheryl - 17"};
+					int teenPpl = teenPeople.length;
+					for (int i=0; i<teenPpl; i++)
+					{
+						double tip2;
+						tip2 = numTeen;
+						giveMoney.append("Tips " + teenPeople[i] + "- $" + tip2 + " earned /n");
+					}
+					String[] kidPeople = {"Carl - 12", "Herman - 8"};
+					int kidPpl = kidPeople.length;
+					for (int i=0; i<kidPpl; i++)
+					{
+						double tip3;
+						tip3 = numKid;
+						giveMoney.append("Tips " + kidPeople[i] + "- $" + tip3 + " earned /n");
+					}
+					String[] totPeople = {"Bella - 1", "Jada - 2"};
+					int totPpl = totPeople.length;
+					for (int i=0; i<totPpl; i++)
+					{
+						double tip4;
+						tip4 = numTot;
+						giveMoney.append("Tips " + totPeople[i] + "- $" + tip4 + " earned /n");
+					}		
+				}else{
+					outcome.setText("Adult Tips: " + numAdult2 + "\r\n" +
+							"Teen Tips: " + numTeen2 + "\r\n" +
+							"Kid Tips: " + numKid2 + "\r\n" +
+							"Tot Tips: " + numTot2 + "\r\n");
+					
+					String[] adultPeople = {"Joe - 25", "Ben -22"};
+					int adtPpl = adultPeople.length;
+					for (int i=0; i<adtPpl; i++)
+					{
+						//Create a float value for tips for each group
+						double tip5;
+						tip5 = numAdult2;
+						giveMoney.append("Tips " + adultPeople[i] + "- $" + tip5 + " earned /n");
+					}
+					
+					String[] teenPeople = {"Suzy - 18", "Cheryl - 17"};
+					int teenPpl = teenPeople.length;
+					for (int i=0; i<teenPpl; i++)
+					{
+						double tip6;
+						tip6 = numTeen2;
+						giveMoney.append("Tips " + teenPeople[i] + "- $" + tip6 + " earned /n");
+					}
+					String[] kidPeople = {"Carl - 12", "Herman - 8"};
+					int kidPpl = kidPeople.length;
+					for (int i=0; i<kidPpl; i++)
+					{
+						double tip7;
+						tip7 = numKid2;
+						giveMoney.append("Tips " + kidPeople[i] + "- $" + tip7 + " earned /n");
+					}
+					String[] totPeople = {"Bella - 1", "Jada - 2"};
+					int totPpl = totPeople.length;
+					for (int i=0; i<totPpl; i++)
+					{
+						double tip8;
+						tip8 = numTot2;
+						giveMoney.append("Tips " + totPeople[i] + "- $" + tip8 + " earned /n");
+					}
+				}
 			}
 		});
+		
+			//Reset Button to clear value
+			Button c = new Button(this);
+			c.setText("Reset");
+			
+			//EventListner for Button
+			c.setOnClickListener(new View.OnClickListener()
+			{
+				@Override
+				public void onClick(View v)
+				{
+					et.setText("");
+					outcome.setText("");
+					giveMoney.setText("");
+				}
+			});
 	}
 
 	@Override
