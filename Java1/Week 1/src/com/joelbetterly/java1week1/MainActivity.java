@@ -16,9 +16,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Button;
 
-
-
-
 public class MainActivity extends Activity
 {
 
@@ -29,6 +26,8 @@ public class MainActivity extends Activity
 	double tip = .01;
 	TextView outcome;
 	TextView giveMoney;
+	boolean displayTextView;
+	TextView jBool;
 	
 	
 	@Override
@@ -183,6 +182,38 @@ public class MainActivity extends Activity
 					giveMoney.setText("");
 				}
 			});
+			
+			//Create LinearLayOut form
+			LinearLayout form = new LinearLayout(this);
+	        form.setOrientation(LinearLayout.HORIZONTAL);
+	        lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+	        form.setLayoutParams(lp);
+	        
+	        jBool = new TextView(this);
+	        jBool.setText("Bool was false.");
+	        
+	        String input = "true";
+	        if (input.equals("true")) {
+	        	
+	           displayTextView = true;
+	           form.addView(et);
+	           form.addView(b);
+	           form.addView(c);
+	        } else {
+	        	displayTextView = false;
+	        	ll.addView(jBool);
+	        }
+
+	    
+	        ll.addView(form);
+	        
+	        outcome = new TextView(this);
+	        ll.addView(outcome);
+	        
+	        giveMoney = new TextView(this);
+	        ll.addView(giveMoney);
+	        
+	        setContentView(ll);
 	}
 
 	@Override
