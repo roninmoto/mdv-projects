@@ -28,9 +28,13 @@ public final class R {
     }
     public static final class integer {
         public static final int adult=0x7f040000;
+        public static final int adult2=0x7f040004;
         public static final int kid=0x7f040002;
+        public static final int kid2=0x7f040006;
         public static final int teen=0x7f040001;
+        public static final int teen2=0x7f040005;
         public static final int tot=0x7f040003;
+        public static final int tot2=0x7f040007;
     }
     public static final class menu {
         public static final int main=0x7f070000;
