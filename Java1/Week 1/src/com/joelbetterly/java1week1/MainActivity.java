@@ -44,7 +44,7 @@ public class MainActivity extends Activity
 		//Add the TextView
 		TextView tv = new TextView(this);
 		tv.setText("% based on Tips");
-		ll.addView(et);
+		ll.addView(tv);
 		
 		//Add edit text for click event
 		et = new EditText(this);
@@ -220,7 +220,7 @@ public class MainActivity extends Activity
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
 
