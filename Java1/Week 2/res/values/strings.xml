@@ -3,6 +3,21 @@
 
     <string name="app_name">automobile</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-
+    
+	<!-- Strings for different car makes and models -->
+	<string name="usa_name">Ford</string>
+	<string name="usa_make">Mustang</string>
+	<string name="usa_price">$13,200</string>
+	<string name="usa2_name">Dodge</string>
+	<string name="usa2_make">Viper</string>
+	<string name="usa2_price">$97,235</string>
+	<string name="usa3_name">Chevy</string>
+	<string name="usa3_make">Corvette</string>
+	<string name="usa3_price">$54,600</string>
+	<string name="intntl_name">Ferrari</string>
+	<string name="intntl_make">458 Spider</string>
+	<string name="intntl_price">$258,000</string>
+	<string name="intntl2_name">Lamborghini</string>
+	<string name="intntl2_make">Murcielago</string>
+	<string name="intntl2_price">$400,000</string>
 </resources>
