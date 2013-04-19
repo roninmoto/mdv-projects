@@ -1,5 +1,7 @@
 package cars.lib;
 
+//LinearLayout like the way Josh shows in the video
+
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -15,6 +17,7 @@ public class LayoutView {
         ll.setLayoutParams(lp);
 		
         EditText et = new EditText(context);
+        //float per requirement
         lp = new LayoutParams(0, LayoutParams.WRAP_CONTENT, 1.0f);
         et.setHint(hint);
         et.setLayoutParams(lp);
