@@ -1,9 +1,4 @@
-/*
- * Project: automobile
- * Package: com.jbetterly.automobile
- * @author: Joel Betterly
- * Date: 	Apr 17, 2013
- */
+/** Automatically generated file. DO NOT MODIFY */
 package com.jbetterly.automobile;
 
 public final class BuildConfig {
