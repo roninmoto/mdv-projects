@@ -1,6 +1,16 @@
 package com.jbetterly.auto2;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.json.JSONException;
+
 import android.os.Bundle;
+import android.os.AsyncTask;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 
@@ -14,6 +24,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.view.View.OnClickListener;
@@ -133,10 +144,107 @@ public class MainActivity extends Activity
 		return true;
 	}
 
+    //Creates URL from API
+    
+    private void getCar(String text){
+    	Log.i("CLICK",text);
+    	
+    	String baseURL = "http://api.edmunds.com/api/v1/vehicle/vin/" + text + "/configuration?api_key=65hk4m7bhhxb3hz2hsvgf98z";
+    	
+    	URL finalURL;
+    	try{
+    		finalURL = new URL(baseURL);
+    		Log.i("my url:", baseURL);
+    		CarRequest cr = new CarRequest();
+    		cr.execute(finalURL);
+    		
+    	} catch (MalformedURLException e){
+    		Log.e("BAD URL", "MALFORMED URL");
+    		finalURL = null;
+    	}
+    }
 	
 	
-	
-	
-	
+    //Function to get saved storage - log out when app launches.
+    @SuppressWarnings("unused")
+	private ArrayList<String> getSave() 
+    {
+		String stored = FileStore.readStringFile(_context, "temp", true);
+		
+		ArrayList<String> mySave = new ArrayList<String>();
+		mySave.add("Select Saved");
+		if(stored == null){
+			Log.i("PROBLEM", "NO SAVED FILE FOUND");
+		} else 
+		{
+			String[] saves = stored.split(",");
+			for(int i=0; i<saves.length; i++)
+			{
+				mySave.add(saves[i]);
+			}
+		}
+		return mySave;
+	}
+
+    //Call my API URL and update data that is shown in app. 
+    
+    public class CarRequest extends AsyncTask<URL, Void, String>{
+    	
+    	@Override
+    	protected String doInBackground(URL... urls)
+    	{
+    		String response ="";
+    		for(URL url: urls)
+    		{
+    			response = WebChecks.getURLStringResponse(url);
+    		}
+    		return response;
+    	}
+    	
+    	@Override
+    	protected void onPostExecute(String result)
+    	{
+    		Log.i("URL RESPONSE", result);
+    		
+    		try
+    		{
+				
+    			JSONObject json = new JSONObject(result);
+    			
+    			JSONObject results = json.getJSONObject("link").getJSONObject("make").getJSONObject("name");
+    			if (results.getString("name").compareTo("")==0)
+    			{
+    				Toast toast = Toast.makeText(_context, "NOPE", Toast.LENGTH_SHORT);
+    				toast.show();
+    					}else
+    					{
+    						Toast toast = Toast.makeText(_context, "YES!" + results.getString("name"), Toast.LENGTH_SHORT);
+    						toast.show();
+    					}
+    		/*	JSONObject productObject = json.getJSONObject("link").getJSONObject("make");
+    			JSONArray carmake = productObject.getJSONArray("make");
+
+    			JSONObject listObjs = carmake.getJSONObject(0);
+	    			
+	    		JSONObject myObj = listObjs.getJSONObject("link").getJSONObject("make");
+	    			String carMake = myObj.getString("name");
+	    			Log.i("MAKE", carMake.toString());
+    			*/
+				//	String edmake = carmake.getJSONObject(0).getString("name");
+
+				//	_makeName.setText(edmake);
+
+				//	Log.i("JSON RESULTS",edmake.toString());
+
+			}catch (JSONException e)
+			{
+				Log.e("JSON","JSON OBJECT EXCEPTION");
+			}
+    		
+    	}
+		
+	}    
+    
+    // TEST VIN NUMBER TO USE IN SIMULATOR JM1BJ227X30644735
 	
 }
