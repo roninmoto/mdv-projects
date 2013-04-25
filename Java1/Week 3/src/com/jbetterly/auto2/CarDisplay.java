@@ -22,7 +22,7 @@ public class CarDisplay extends GridLayout
 		this.setColumnCount(2);
 		
 		TextView nameLabel = new TextView(_context);
-		nameLabel.setText("Car Name: ");
+		nameLabel.setText("Car Make: ");
 		_makeName = new TextView(_context);
 		_makeName.setText("");
 		
