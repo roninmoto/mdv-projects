@@ -9,6 +9,7 @@ public class CarDisplay extends GridLayout
 {
 	//going to pull Make, Model and Year from API  May add more if time allows
 	
+	TextView _vin;
 	TextView _makeName;
 	TextView _modelName;
 	TextView _year; 
@@ -20,6 +21,11 @@ public class CarDisplay extends GridLayout
 		_context = context;
 		
 		this.setColumnCount(2);
+		
+		TextView vinLabel = new TextView(_context);
+		vinLabel.setText("Car Make: ");
+		_vin = new TextView(_context);
+		_vin.setText("");
 		
 		TextView nameLabel = new TextView(_context);
 		nameLabel.setText("Car Make: ");
@@ -35,6 +41,9 @@ public class CarDisplay extends GridLayout
 		yearLabel.setText("Year: ");
 		_year = new TextView(_context);
 		_year.setText("");
+		
+		this.addView(vinLabel);
+		this.addView(_vin);
 		
 		this.addView(nameLabel);
 		this.addView(_makeName);
