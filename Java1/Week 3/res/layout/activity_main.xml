@@ -100,8 +100,7 @@
                 android:layout_gravity="center_horizontal|top"
                 android:layout_row="1"
                 android:ems="10"
-                android:hint="Enter type"
-                android:inputType="number" />
+                android:hint="Enter type" />
 
             <Button
                 android:id="@+id/goButton"
