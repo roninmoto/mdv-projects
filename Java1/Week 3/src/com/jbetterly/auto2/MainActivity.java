@@ -4,7 +4,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONException;
 
@@ -24,9 +23,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.View.OnClickListener;
 
 
@@ -99,6 +98,20 @@ public class MainActivity extends Activity
 				getCar(et.getText().toString());
 			}
 		});
+		
+		
+		// button for about page.
+		Button B = (Button) findViewById(R.id.infoPage);
+		B.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// info page button
+				Intent intent = new Intent(MainActivity.this, InfoPage.class);
+				startActivity(intent);
+			}
+		});		
+		
 
 		// network detection - Create Methods to Detect Network Connectivity
 
@@ -159,7 +172,7 @@ public class MainActivity extends Activity
     		cr.execute(finalURL);
     		
     	} catch (MalformedURLException e){
-    		Log.e("BAD URL", "MALFORMED URL");
+    		Log.e("BAD URL", "MALFORMED URL", e);
     		finalURL = null;
     	}
     }
@@ -210,35 +223,32 @@ public class MainActivity extends Activity
     		{
 				
     			JSONObject json = new JSONObject(result);
-    			
-    			JSONObject results = json.getJSONObject("link").getJSONObject("make").getJSONObject("name");
-    			if (results.getString("name").compareTo("")==0)
-    			{
-    				Toast toast = Toast.makeText(_context, "NOPE", Toast.LENGTH_SHORT);
-    				toast.show();
-    					}else
-    					{
-    						Toast toast = Toast.makeText(_context, "YES!" + results.getString("name"), Toast.LENGTH_SHORT);
-    						toast.show();
-    					}
-    		/*	JSONObject productObject = json.getJSONObject("link").getJSONObject("make");
-    			JSONArray carmake = productObject.getJSONArray("make");
 
-    			JSONObject listObjs = carmake.getJSONObject(0);
-	    			
-	    		JSONObject myObj = listObjs.getJSONObject("link").getJSONObject("make");
-	    			String carMake = myObj.getString("name");
+	    			String carMake = json.getJSONObject("make").getString("name");
 	    			Log.i("MAKE", carMake.toString());
-    			*/
-				//	String edmake = carmake.getJSONObject(0).getString("name");
+	    			String carModel = json.getJSONObject("model").getString("name");
+	    			Log.i("MODEL", carModel.toString());
+    			    String carYear = json.getString("year");
+    			    Log.i("YEAR", carYear.toString());
+    			    String carStyle = json.getString("vehicleStyle");
+	    			Log.i("STYLE", carStyle.toString());
+	    			
+					String edmake = json.getJSONObject("make").getString("name");
+					String edmodel = json.getJSONObject("model").getString("name");
+					String edstyle = json.getString("vehicleStyle");
+					String edyear = json.getString("year");
 
-				//	_makeName.setText(edmake);
+					_makeName.setText(edmake);
+					_modelName.setText(edmodel);
+					_vin.setText(edstyle);
+					_year.setText(edyear);
 
-				//	Log.i("JSON RESULTS",edmake.toString());
+					Log.i("JSON RESULTS",edmake.toString());
+					Log.i("JSON RESULTS",edmodel.toString());
 
 			}catch (JSONException e)
 			{
-				Log.e("JSON","JSON OBJECT EXCEPTION");
+				Log.e("JSON","JSON OBJECT EXCEPTION", e);
 			}
     		
     	}
