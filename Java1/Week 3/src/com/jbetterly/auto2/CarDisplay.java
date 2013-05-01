@@ -1,6 +1,7 @@
 package com.jbetterly.auto2;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.widget.GridLayout;
 import android.widget.TextView;
 
@@ -23,7 +24,7 @@ public class CarDisplay extends GridLayout
 		this.setColumnCount(2);
 		
 		TextView vinLabel = new TextView(_context);
-		vinLabel.setText("Car Make: ");
+		vinLabel.setText("Car Style: ");
 		_vin = new TextView(_context);
 		_vin.setText("");
 		
