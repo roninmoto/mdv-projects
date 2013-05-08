@@ -1,3 +1,9 @@
+/*
+ * Project: AutoJava2
+ * Package: com.jbetterly.lib
+ * @author: Joel Betterly
+ * Date: 	May 8, 2013
+ */
 package com.jbetterly.lib;
 
 import java.io.BufferedInputStream;
