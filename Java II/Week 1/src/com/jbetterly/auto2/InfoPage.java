@@ -32,6 +32,8 @@ public class InfoPage extends Activity {
 				"AutoMobile App \r\n" +
 				"Find Basic information via a vehicle VIN number \r\n");
         
+        
+        //My button to return back to MainActivity
         Button B1 = (Button) findViewById(R.id.button1);
     	B1.setOnClickListener(new OnClickListener() {
     		
