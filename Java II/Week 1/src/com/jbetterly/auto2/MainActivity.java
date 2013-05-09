@@ -51,7 +51,7 @@ public class MainActivity extends Activity
 	
 	class CarInfo
 	{
-		String carURL = "unknown";
+		String carURL = "null";
 	}
 	
 	private CarInfo carInfo = new CarInfo();
@@ -132,14 +132,14 @@ public class MainActivity extends Activity
 				
 		    	Intent intent = new Intent(MainActivity.this, InfoPage.class);
 
-		    	if(carInfo.carURL != "unknown")
+		    	if(carInfo.carURL != "null")
 		    	{
-		    		intent.putExtra("API",  carInfo.carURL);
+		    		intent.putExtra("API",  "http://www.edmunds.com/");
 		    	}else
 		    	{
 		    		intent.putExtra("API",  "http://www.edmunds.com/");
 		    	}
-		    	startActivity(intent);
+		    	startActivityForResult(intent,0);
 				
 			}
 		});		
@@ -270,7 +270,7 @@ public class MainActivity extends Activity
 					String edstyle = json.getString("vehicleStyle");
 					String edyear = json.getString("year");
 					
-					carInfo.carURL = json.getString("url");
+					carInfo.carURL = json.getString("vinModelGroup");
 
 					_makeName.setText(edmake);
 					_modelName.setText(edmodel);
@@ -303,7 +303,7 @@ public class MainActivity extends Activity
 		{
 			if (resultCode == RESULT_OK)
 			{
-
+				Log.i("TOAST OKAY", "Toast was sucessful");
 				Toast.makeText(this, data.getData().toString(),
 						Toast.LENGTH_LONG).show();
 			}
