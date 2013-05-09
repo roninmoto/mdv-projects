@@ -7,9 +7,12 @@
 package com.jbetterly.auto2;
 
 import android.app.Activity;
+import android.net.Uri;
+import android.util.Log;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TextView;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.graphics.Color;
 import android.view.View;
@@ -34,6 +37,7 @@ public class InfoPage extends Activity {
         
         
         //My button to return back to MainActivity
+        
         Button B1 = (Button) findViewById(R.id.button1);
     	B1.setOnClickListener(new OnClickListener() {
     		
@@ -42,6 +46,26 @@ public class InfoPage extends Activity {
     			// info page button
     			Intent intent = new Intent(InfoPage.this, MainActivity.class);
     			startActivity(intent);
+    		}
+    	});
+        
+        
+        
+        Button B2 = (Button) findViewById(R.id.btnImplicit);
+    	B2.setOnClickListener(new OnClickListener() {
+    		
+    		@Override
+    		public void onClick(View v) {
+    		// info page button
+    		//	Intent intent = new Intent(InfoPage.this, MainActivity.class);
+    		//	startActivity(intent);
+    			
+    			Intent internetIntent = new Intent(Intent.ACTION_VIEW,Uri.parse(getIntent().getExtras().getString("")));
+     	 		Log.i("API txt", getIntent().getExtras().getString(""));
+     			 internetIntent.setComponent(new ComponentName("com.android.browser","com.android.browser.BrowserActivity"));
+     			 internetIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+     			 startActivity(internetIntent);
+    			
     		}
     	});
 		
@@ -54,4 +78,20 @@ public class InfoPage extends Activity {
 		return true;
 	}
 
+	//@Override
+	public void onMainPage() 
+	{
+		Intent intent = new Intent(InfoPage.this, MainActivity.class);
+		intent.putExtra("OK",  "http://www.edmunson.com");
+		startActivity(intent);
+		
+		//Set the data to pass back
+		intent.setData(Uri.parse("Working!"));
+		setResult(RESULT_OK, intent);
+		
+		
+		//Close the activity
+		finish();	
+	
+	}
 }
