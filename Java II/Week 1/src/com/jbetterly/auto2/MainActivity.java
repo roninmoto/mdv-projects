@@ -29,6 +29,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -46,6 +47,7 @@ public class MainActivity extends Activity
 	TextView _modelName;
 	TextView _year;
 	Intent intent;
+	int request_code = 0;
 	
 	class CarInfo
 	{
@@ -288,6 +290,24 @@ public class MainActivity extends Activity
 	}    
     
     // TEST VIN NUMBER TO USE IN SIMULATOR JM1BJ227X30644735
-	
+
+    @Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data)
+	{
+    	super.onActivityResult(requestCode, resultCode, data);
+    	
+		if (requestCode == request_code)
+			Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG);
+			Log.i("TOAST ISSUE", "Not passing data");
+			
+		{
+			if (resultCode == RESULT_OK)
+			{
+
+				Toast.makeText(this, data.getData().toString(),
+						Toast.LENGTH_LONG).show();
+			}
+		}
+	}    
 
 }	//ends code
