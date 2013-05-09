@@ -72,9 +72,10 @@ public class InfoPage extends Activity {
     			//URl is passed from the MainActivity from the Public void onclick method
     			Intent internetIntent = new Intent(Intent.ACTION_VIEW,Uri.parse(getIntent().getExtras().getString("API")));
      	 		Log.i("API TXT", getIntent().getExtras().getString("API"));
-     			 internetIntent.setComponent(new ComponentName("com.android.browser","com.android.browser.BrowserActivity"));
-     			 internetIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-     			 startActivity(internetIntent);
+     	 		
+     			internetIntent.setComponent(new ComponentName("com.android.browser","com.android.browser.BrowserActivity"));
+     			internetIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+     			startActivity(internetIntent);
     			
     		}
     	});
