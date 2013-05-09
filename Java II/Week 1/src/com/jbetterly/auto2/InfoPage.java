@@ -33,7 +33,7 @@ public class InfoPage extends Activity {
 		
 		//Basic information to display on top of page
         tv.setText("Joel Betterly \r\n" +
-				"Java 1 - Week 4 \r\n\n" +
+				"Java 2 \r\n\n" +
 				"AutoMobile App \r\n" +
 				"Find Basic information via a vehicle VIN number \r\n");
         
@@ -41,13 +41,23 @@ public class InfoPage extends Activity {
         //My button to return back to MainActivity
         
         Button B1 = (Button) findViewById(R.id.button1);
-    	B1.setOnClickListener(new OnClickListener() {
+    	B1.setOnClickListener(new OnClickListener() 
+    	{
     		
     		@Override
-    		public void onClick(View v) {
+    		public void onClick(View v) 
+    		{
     			// info page button
     			Intent intent = new Intent(InfoPage.this, MainActivity.class);
-    			startActivity(intent);
+    			    			
+    			//Pass back this data to the MainActivity
+    			intent.setData(Uri.parse("Cars are awesome"));
+    			//startActivityForResult(intent, 1);
+    			
+    			setResult(RESULT_OK, intent);
+    			Log.i("EXPLICIT", "String sent");
+    			
+    			finish();
     		}
     	});
         
@@ -59,9 +69,9 @@ public class InfoPage extends Activity {
     		@Override
     		public void onClick(View v) 
     		{
-
+    			//URl is passed from the MainActivity from the Public void onclick method
     			Intent internetIntent = new Intent(Intent.ACTION_VIEW,Uri.parse(getIntent().getExtras().getString("API")));
-     	 		Log.i("API txt", getIntent().getExtras().getString("API"));
+     	 		Log.i("API TXT", getIntent().getExtras().getString("API"));
      			 internetIntent.setComponent(new ComponentName("com.android.browser","com.android.browser.BrowserActivity"));
      			 internetIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
      			 startActivity(internetIntent);
@@ -78,20 +88,4 @@ public class InfoPage extends Activity {
 		return true;
 	}
 
-	//@Override  //for some reason IDE wont let me make this an overide method
-	public void onMainPage() 
-	{
-		Intent intent = new Intent(InfoPage.this, MainActivity.class);
-		intent.putExtra("OK",  "http://www.edmunson.com");
-		startActivity(intent);
-		
-		//Set the data to pass back to MainActivity
-		intent.setData(Uri.parse("Working!"));
-		setResult(RESULT_OK, intent);
-		
-		
-		//Close the activity
-		finish();	
-	
-	}
 }
