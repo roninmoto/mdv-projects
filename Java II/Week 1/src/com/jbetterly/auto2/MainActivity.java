@@ -22,7 +22,7 @@ import android.app.AlertDialog;
 import com.jbetterly.auto2.R;
 import com.jbetterly.lib.FileStore;
 import com.jbetterly.lib.WebChecks;
-
+import android.net.Uri;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -45,6 +45,14 @@ public class MainActivity extends Activity
 	TextView _makeName;
 	TextView _modelName;
 	TextView _year;
+	Intent intent;
+	
+	class CarInfo
+	{
+		String carURL = "unknown";
+	}
+	
+	private CarInfo carInfo = new CarInfo();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -243,6 +251,8 @@ public class MainActivity extends Activity
 					String edmodel = json.getJSONObject("model").getString("name");
 					String edstyle = json.getString("vehicleStyle");
 					String edyear = json.getString("year");
+					
+					carInfo.carURL = json.getString("url");
 
 					_makeName.setText(edmake);
 					_modelName.setText(edmodel);
@@ -263,4 +273,23 @@ public class MainActivity extends Activity
     
     // TEST VIN NUMBER TO USE IN SIMULATOR JM1BJ227X30644735
 	
-}
+//}
+
+
+//@Override
+    public void onInfoPage() 
+    {
+
+    	Intent intent = new Intent(MainActivity.this, InfoPage.class);
+
+    	if(carInfo.carURL != "unknown")
+    	{
+    		intent.putExtra("API",  carInfo.carURL);
+    	}else
+    	{
+    		intent.putExtra("API",  "http://www.edmunds.com/");
+    	}
+    	startActivity(intent);
+    }
+
+}	//ends code
