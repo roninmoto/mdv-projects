@@ -1,9 +1,4 @@
-/*
- * Project: AutoJava2
- * Package: com.jbetterly.auto2
- * @author: Joel Betterly
- * Date: 	May 8, 2013
- */
+/** Automatically generated file. DO NOT MODIFY */
 package com.jbetterly.auto2;
 
 public final class BuildConfig {
