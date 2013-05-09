@@ -119,10 +119,26 @@ public class MainActivity extends Activity
 		B.setOnClickListener(new OnClickListener() {
 			
 			@Override
-			public void onClick(View v) {
+			public void onClick(View v) 
+			{
 				// info page button
-				Intent intent = new Intent(MainActivity.this, InfoPage.class);
-				startActivity(intent);
+				//Intent intent = new Intent(MainActivity.this, InfoPage.class);
+				//startActivity(intent);
+				
+				/* This starts the implicit intent and pulls data from infoPage.java
+				 * which allows the second button to pull data from the edmunds.com website  */
+				
+		    	Intent intent = new Intent(MainActivity.this, InfoPage.class);
+
+		    	if(carInfo.carURL != "unknown")
+		    	{
+		    		intent.putExtra("API",  carInfo.carURL);
+		    	}else
+		    	{
+		    		intent.putExtra("API",  "http://www.edmunds.com/");
+		    	}
+		    	startActivity(intent);
+				
 			}
 		});		
 		
@@ -273,23 +289,5 @@ public class MainActivity extends Activity
     
     // TEST VIN NUMBER TO USE IN SIMULATOR JM1BJ227X30644735
 	
-//}
-
-
-//@Override
-    public void onInfoPage() 
-    {
-
-    	Intent intent = new Intent(MainActivity.this, InfoPage.class);
-
-    	if(carInfo.carURL != "unknown")
-    	{
-    		intent.putExtra("API",  carInfo.carURL);
-    	}else
-    	{
-    		intent.putExtra("API",  "http://www.edmunds.com/");
-    	}
-    	startActivity(intent);
-    }
 
 }	//ends code
