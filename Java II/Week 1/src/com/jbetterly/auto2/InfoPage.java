@@ -30,6 +30,8 @@ public class InfoPage extends Activity {
 		
 		tv.setTextColor(Color.parseColor("#006633"));
 		tv.setTextSize(18.f);
+		
+		//Basic information to display on top of page
         tv.setText("Joel Betterly \r\n" +
 				"Java 1 - Week 4 \r\n\n" +
 				"AutoMobile App \r\n" +
@@ -50,18 +52,16 @@ public class InfoPage extends Activity {
     	});
         
         
-        
+        //When clicking button 2, should use implicit intent to activate web page
         Button B2 = (Button) findViewById(R.id.btnImplicit);
     	B2.setOnClickListener(new OnClickListener() {
     		
     		@Override
-    		public void onClick(View v) {
-    		// info page button
-    		//	Intent intent = new Intent(InfoPage.this, MainActivity.class);
-    		//	startActivity(intent);
-    			
-    			Intent internetIntent = new Intent(Intent.ACTION_VIEW,Uri.parse(getIntent().getExtras().getString("")));
-     	 		Log.i("API txt", getIntent().getExtras().getString(""));
+    		public void onClick(View v) 
+    		{
+
+    			Intent internetIntent = new Intent(Intent.ACTION_VIEW,Uri.parse(getIntent().getExtras().getString("API")));
+     	 		Log.i("API txt", getIntent().getExtras().getString("API"));
      			 internetIntent.setComponent(new ComponentName("com.android.browser","com.android.browser.BrowserActivity"));
      			 internetIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
      			 startActivity(internetIntent);
@@ -78,14 +78,14 @@ public class InfoPage extends Activity {
 		return true;
 	}
 
-	//@Override
+	//@Override  //for some reason IDE wont let me make this an overide method
 	public void onMainPage() 
 	{
 		Intent intent = new Intent(InfoPage.this, MainActivity.class);
 		intent.putExtra("OK",  "http://www.edmunson.com");
 		startActivity(intent);
 		
-		//Set the data to pass back
+		//Set the data to pass back to MainActivity
 		intent.setData(Uri.parse("Working!"));
 		setResult(RESULT_OK, intent);
 		
